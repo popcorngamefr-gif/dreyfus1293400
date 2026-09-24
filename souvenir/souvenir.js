@@ -129,13 +129,13 @@ des evenements clavier / pointeur, comme le ferait un utilisateur.
 			'<div class="sv-scene">' +
 				'<div class="sv-cadre"><div class="sv-porte">' +
 					'<div class="sv-panneau sv-haut"></div><div class="sv-panneau sv-bas"></div>' +
-					'<div class="sv-judas"></div><div class="sv-numero">16</div>' + CHAT +
+					'<div class="sv-judas"></div><div class="sv-numero">12</div>' + CHAT +
 					'<div class="sv-poignee"></div>' +
 				'</div></div>' +
 				// apres le cadre, sinon le mur (ombre du cadre) le recouvre
 				'<div class="sv-sol"><div class="sv-paillasson">Bienvenue</div></div>' +
 			'</div>' +
-			'<div class="sv-legende"><h1>Souvenir depuis Pierre Dreyfus</h1><p>16 rue Pierre Dreyfus</p></div>' +
+			'<div class="sv-legende"><h1>Souvenir depuis Pierre Dreyfus</h1><p>12 rue Pierre Dreyfus</p></div>' +
 			'<div class="sv-actions">' +
 				'<button type="button" class="sv-entrer" disabled>Chargement…</button>' +
 				'<a class="sv-lien-classique" href="' + lienClassique + '">Navigation classique</a>' +

@@ -1,0 +1,16 @@
+# Tout ce qui n'a pas a etre en ligne (voir README.md)
+/CLAUDE.md
+/README.md
+/ouvrir-visite.bat
+/outil-correctif
+/scripts
+/run_args.json
+*.py
+*.log
+__pycache__
+venv
+debug
+# originaux remplaces par leur version .modified (gardes dans le repo pour reference)
+*.orig.*
+# fichiers de cles d'acces utilises seulement par le telechargeur
+/_mp_api/player/models/*/files_type*

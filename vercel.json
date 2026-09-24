@@ -1,0 +1,54 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/api/mp/models/graph",
+      "has": [
+        {
+          "type": "query",
+          "key": "operationName",
+          "value": "(?<op>GetFloors|GetModelDetails|GetModelOptions|GetModelViewPrefetch|GetRoomBounds|GetRoomClassifications|GetRooms|GetShowcaseSweeps|GetSnapshots)"
+        }
+      ],
+      "destination": "/_mp_api/mp/models/graph_:op.json"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/_mp_api/:path*"
+    },
+    {
+      "source": "/locale/messages/:file",
+      "destination": "/locale/strings.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(api|_mp_api)/(v2/users/current|v1/plugins|v1/jsonstore/.*|v2/models/.*/sweeps|mp/models/graph|mp/accounts/graph|player/models/.*/files)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(api|_mp_api)/v1/player/models/:id/thumb",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/webp"
+        }
+      ]
+    },
+    {
+      "source": "/(models|apifs|fonts|webgl-vendors|cursors|images)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Visite virtuelle : 16 rue Pierre Dreyfus
+# Visite virtuelle : 12 rue Pierre Dreyfus
 
 Archive de la visite Matterport `JgaZQe7xn5N`, téléchargée avec
 [matterport-dl](https://github.com/rebane2001/matterport-dl) (version avec le correctif de la PR #205),

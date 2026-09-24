@@ -1,0 +1,15 @@
+{
+  "config": {"speed":   {
+    "description": "Flythrough Time (seconds)",
+    "type": "number",
+    "ui:widget": "slider",
+    "default": 10,
+    "maximum": 20,
+    "minimum": 1
+  }},
+  "description": "Matterport Labs Flythrough Generator",
+  "options":   {
+    "mlsEnabled": true,
+    "icon": true
+  }
+}

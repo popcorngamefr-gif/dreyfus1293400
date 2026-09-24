@@ -1,0 +1,1721 @@
+{
+  "data" : {
+    "model" : {
+      "floors" : [ {
+        "id" : "tsmq1wak12rhgn0mawksxcwcd",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "edges" : [ {
+          "id" : "cttpdf9wegnmh8cb5txtb8ebd",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "e84wngqc4y3n2et85df9afmgd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0256412570214923,
+              "y" : 5.253250176178129
+            }
+          }, {
+            "id" : "yfg19cqsszfx8yk8kxb8rffnc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0249305008523784,
+              "y" : 4.48032878903773
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ ]
+        }, {
+          "id" : "niwep7r4si1indbc3t8a4kh1a",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "rhh68wu0r5iefa5ne6i23ibpc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7012286787045776,
+              "y" : 4.481961618353041
+            }
+          }, {
+            "id" : "yfg19cqsszfx8yk8kxb8rffnc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0249305008523784,
+              "y" : 4.48032878903773
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ ]
+        }, {
+          "id" : "w0o460w9brt",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "uqnmen4nhdkuyz3dpaxqnwe4c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.644196357228129,
+              "y" : 0.9637404190803299
+            }
+          }, {
+            "id" : "xoeynq9ulho",
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            },
+            "position" : {
+              "x" : -5.645779032669025,
+              "y" : 2.935978868166574
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "aq934azn8a4niz14nsfeiyazc",
+            "width" : 1.6170171050198718,
+            "relativeCenter" : 0.4648958481366491,
+            "type" : "window",
+            "height" : 1.1790000200271606,
+            "lowerElevation" : 1.0070000290870667,
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            }
+          } ]
+        }, {
+          "id" : "y33n9sewccy0u7kgmp62eyhfa",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6uht8cnsnt7dpxxc78qf60ncb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -0.5954613205423309,
+              "y" : -0.6461099844048332
+            }
+          }, {
+            "id" : "uh53kd5rwce7tt0xx1aii2whd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7061462646956539,
+              "y" : -0.6448576452958024
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "5b4uffmxn2q4i6e2efbhqc5xd",
+            "width" : 1.0150137010468794,
+            "relativeCenter" : 0.5193466740669186,
+            "type" : "doorway",
+            "height" : 2.092999903485179,
+            "lowerElevation" : -0.006000000983476639,
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            }
+          } ]
+        }, {
+          "id" : "3its96mrcjw",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "3202urbd0a1qxi6qx3a7knn9c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -7.741172389148343,
+              "y" : 2.9339625500182254
+            }
+          }, {
+            "id" : "xoeynq9ulho",
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            },
+            "position" : {
+              "x" : -5.645779032669025,
+              "y" : 2.935978868166574
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "1bhtef4gbzud6ruyrb9qpu4zc",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "zhp6619wfm8utwwytuwus1m0a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.7974128980281057,
+              "y" : 6.4849774847487
+            }
+          }, {
+            "id" : "gd0bia472sc8p1ef94p8k5dqa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.002694361716366,
+              "y" : 6.481922427186408
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "738k3p4p6kxuw1hskshdmcmhb",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6uht8cnsnt7dpxxc78qf60ncb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -0.5954613205423309,
+              "y" : -0.6461099844048332
+            }
+          }, {
+            "id" : "t0yt0ewfddz1z9b3cxutn84cc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -0.5970146434779114,
+              "y" : 0.9685952059453277
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "tzilf1vpbk8",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "az7px0idtbd7wnu0ehti9wd7c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.64002169742157,
+              "y" : 5.201014146610398
+            }
+          }, {
+            "id" : "xoeynq9ulho",
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            },
+            "position" : {
+              "x" : -5.645779032669025,
+              "y" : 2.935978868166574
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "uogxixrwsx4",
+            "width" : 1.8792317752075218,
+            "relativeCenter" : 0.48582042832314565,
+            "type" : "window",
+            "height" : 1.524,
+            "lowerElevation" : 0.7432410373941876,
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            }
+          } ]
+        }, {
+          "id" : "xchbhyerah43xy8i4pg64uwdb",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "zhp6619wfm8utwwytuwus1m0a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.7974128980281057,
+              "y" : 6.4849774847487
+            }
+          }, {
+            "id" : "zh5mgab7tkfxce8wu43rxcebd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.797075090862144,
+              "y" : 6.110929164130281
+            }
+          } ],
+          "centerLineBias" : 0.69,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "xdw8f469ipb0hh13h8i10eeaa",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "mimzfmas7m2gqzft5k9kn5iwd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.702429422698707,
+              "y" : 3.2124531622217316
+            }
+          }, {
+            "id" : "4xkgufqm8bszh1sau50rtpgab",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7045872972250725,
+              "y" : 0.9698554549345827
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "g6cm64fx7cu4r7khu4gb0n3ua",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "imu738b1e2mgh8d90k29whh0a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0264190594544897,
+              "y" : 6.111628001621298
+            }
+          }, {
+            "id" : "zh5mgab7tkfxce8wu43rxcebd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.797075090862144,
+              "y" : 6.110929164130281
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "iyfxgz9wr3ewnezwdr8371b9a",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "us1qhq1cagcxqihk3243p70hb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.640685912399575,
+              "y" : 5.891976394722698
+            }
+          }, {
+            "id" : "uqd80k068f1ztnnfaz03fqgxb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.002127112763623,
+              "y" : 5.8925906951705125
+            }
+          } ],
+          "centerLineBias" : 0.69,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "kym736k4dc9xcqgshikhf794b",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "rhh68wu0r5iefa5ne6i23ibpc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7012286787045776,
+              "y" : 4.481961618353041
+            }
+          }, {
+            "id" : "mimzfmas7m2gqzft5k9kn5iwd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.702429422698707,
+              "y" : 3.2124531622217316
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "ukidt91fx7w07i48m8hxhedtb",
+            "width" : 0.7765894880840628,
+            "relativeCenter" : 0.45734895949791926,
+            "type" : "doorway",
+            "height" : 2.041685700416565,
+            "lowerElevation" : -0.005421638488769531,
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            }
+          } ]
+        }, {
+          "id" : "p6ns9p4426chrhy57gh3bbq0d",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "imu738b1e2mgh8d90k29whh0a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0264190594544897,
+              "y" : 6.111628001621298
+            }
+          }, {
+            "id" : "e84wngqc4y3n2et85df9afmgd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0256412570214923,
+              "y" : 5.253250176178129
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ ]
+        }, {
+          "id" : "0ehhfeh9hriaecsm2zx0wdk8a",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "uqd80k068f1ztnnfaz03fqgxb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.002127112763623,
+              "y" : 5.8925906951705125
+            }
+          }, {
+            "id" : "gd0bia472sc8p1ef94p8k5dqa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.002694361716366,
+              "y" : 6.481922427186408
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "az4rc47ady2hx7czpgqi6fbbd",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "us1qhq1cagcxqihk3243p70hb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.640685912399575,
+              "y" : 5.891976394722698
+            }
+          }, {
+            "id" : "az7px0idtbd7wnu0ehti9wd7c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.64002169742157,
+              "y" : 5.201014146610398
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "z094q66phb0mcy88xckkrdusd",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "4xkgufqm8bszh1sau50rtpgab",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7045872972250725,
+              "y" : 0.9698554549345827
+            }
+          }, {
+            "id" : "t0yt0ewfddz1z9b3cxutn84cc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -0.5970146434779114,
+              "y" : 0.9685952059453277
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ {
+            "id" : "508pmex8y582tpf0b0hhpbd3d",
+            "width" : 1.2008258792554694,
+            "relativeCenter" : 0.500605903440076,
+            "type" : "doorway",
+            "height" : 2.4040000438690186,
+            "lowerElevation" : -0.009999990463256836,
+            "layer" : {
+              "id" : "6ni0fcwm8m78m57xsskmixu0c"
+            }
+          } ]
+        }, {
+          "id" : "ih4r4xmrx5qy96nzaadzac7id",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "uqnmen4nhdkuyz3dpaxqnwe4c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.644196357228129,
+              "y" : 0.9637404190803299
+            }
+          }, {
+            "id" : "t0yt0ewfddz1z9b3cxutn84cc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -0.5970146434779114,
+              "y" : 0.9685952059453277
+            }
+          } ],
+          "centerLineBias" : 0.3,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "m96p47nn8kst7xnxuky8qbkhb",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "2f6d2g8siet6e8uk4ny120u9c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -7.74335805050474,
+              "y" : 5.1989847252680015
+            }
+          }, {
+            "id" : "az7px0idtbd7wnu0ehti9wd7c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -5.64002169742157,
+              "y" : 5.201014146610398
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "1s6a4u6y78fwx3u4z0n9x7p0c",
+          "layer" : {
+            "id" : "6ni0fcwm8m78m57xsskmixu0c"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "3202urbd0a1qxi6qx3a7knn9c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -7.741172389148343,
+              "y" : 2.9339625500182254
+            }
+          }, {
+            "id" : "2f6d2g8siet6e8uk4ny120u9c",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -7.74335805050474,
+              "y" : 5.1989847252680015
+            }
+          } ],
+          "centerLineBias" : 0.69,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "3i77ufw234fm730765qtanf2c",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "f689me60cft66ukmxcfu9ky4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.9681125791789875,
+              "y" : 6.48042745427613
+            }
+          }, {
+            "id" : "n8ywebphuhq9irxepkqaa5nib",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.024774800424958,
+              "y" : 6.483409920642645
+            }
+          } ],
+          "centerLineBias" : 0.69,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "gbt8a3zxfuxih6m6f50ms9pnc",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "sehn39q8i2thg6rtahi75wraa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.2841290402395287,
+              "y" : 1.7971756726307404
+            }
+          }, {
+            "id" : "bxaayi8rtikt1afneenafah0d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.283379611008996,
+              "y" : 2.560699955663901
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "73qbswtdupye401u0ht8kg17c",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6znrwncpx31duw4k1fabf9x5d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.281207773428926,
+              "y" : 4.7644076761792284
+            }
+          }, {
+            "id" : "3akwhza76adgg7kuxem8eyutd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.280364176795025,
+              "y" : 5.636382813747217
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "echc0bkg4kz00qk428psnhw2b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "sehn39q8i2thg6rtahi75wraa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.2841290402395287,
+              "y" : 1.7971756726307404
+            }
+          }, {
+            "id" : "mqeuqkd0gyxpq5a09hypddn2b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.284927548844724,
+              "y" : 0.9707024133225916
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "kw0g83b36e109qdmke9d9fg4b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "mqeuqkd0gyxpq5a09hypddn2b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.284927548844724,
+              "y" : 0.9707024133225916
+            }
+          }, {
+            "id" : "s2mamw4zk7ixh6eggss12pa2d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.030166476447641,
+              "y" : 0.9743610015707623
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "2cg4zizzy8uizz3c84490scid",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "4xkgufqm8bszh1sau50rtpgab",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7045872972250725,
+              "y" : 0.9698554549345827
+            }
+          }, {
+            "id" : "uh53kd5rwce7tt0xx1aii2whd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7061462646956539,
+              "y" : -0.6448576452958024
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "5wn4p064ywxre3zmsq7k3ua3b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "8z49u1mii2hnem4kspzquhaxa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.027539961519189,
+              "y" : 3.658534152024439
+            }
+          }, {
+            "id" : "88ei2s24hhx6tqg00zs5cpd9b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.282311589316008,
+              "y" : 3.6548684078705067
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.08,
+          "openings" : [ ]
+        }, {
+          "id" : "64heqgi9rs6cbcinqw48c1uyd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "3rs1yemmqdqbf9gasy5ds9xpa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9919258060302663,
+              "y" : 6.48754943256104
+            }
+          }, {
+            "id" : "caqeztkkbd0qeipisfe53crab",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0267700648700477,
+              "y" : 6.485650397239644
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "bd2xsbbyw8hbndc2rsac5f75c",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "sehn39q8i2thg6rtahi75wraa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.2841290402395287,
+              "y" : 1.7971756726307404
+            }
+          }, {
+            "id" : "u60nz9fywrpxndnzgufwygkyd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.7470462042256454,
+              "y" : 1.7976250680815036
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ ]
+        }, {
+          "id" : "w5sqmkzkf2z8tm1yzy1n4nfpd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "8z49u1mii2hnem4kspzquhaxa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.027539961519189,
+              "y" : 3.658534152024439
+            }
+          }, {
+            "id" : "n8ywebphuhq9irxepkqaa5nib",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.024774800424958,
+              "y" : 6.483409920642645
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "btie3gzre1eq7erm19myf0m2c",
+            "width" : 1.6071889796417502,
+            "relativeCenter" : 0.6928188121745625,
+            "type" : "window",
+            "height" : 1.1599999964237213,
+            "lowerElevation" : 1.032999962568283,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          } ]
+        }, {
+          "id" : "8nkrxht9p1860ukxss4pn30ha",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "imu738b1e2mgh8d90k29whh0a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0264190594544897,
+              "y" : 6.111628001621298
+            }
+          }, {
+            "id" : "caqeztkkbd0qeipisfe53crab",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : -1.0267700648700477,
+              "y" : 6.485650397239644
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "m6hbmbirrk7b7wtn3gngti0nc",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6znrwncpx31duw4k1fabf9x5d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.281207773428926,
+              "y" : 4.7644076761792284
+            }
+          }, {
+            "id" : "guwb7cmc6kbx9w7w2uidxrrnb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.9697861939661405,
+              "y" : 4.76508009229908
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "w68siw6yxr224pfmm12diuwwd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "guwb7cmc6kbx9w7w2uidxrrnb",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.9697861939661405,
+              "y" : 4.76508009229908
+            }
+          }, {
+            "id" : "f689me60cft66ukmxcfu9ky4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.9681125791789875,
+              "y" : 6.48042745427613
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "ifxq0yd03deguix6dkfyhxg5d",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "3akwhza76adgg7kuxem8eyutd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.280364176795025,
+              "y" : 5.636382813747217
+            }
+          }, {
+            "id" : "85q5xdc9194hnb6hcmxah9n5a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9927292952962471,
+              "y" : 5.635164298333662
+            }
+          } ],
+          "centerLineBias" : 0.31,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "qq0s98b8ycrfrhe88c3e2he8a",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "z9yinp282uxbsmta80yg6bq4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9938199191735979,
+              "y" : 4.482238570096249
+            }
+          }, {
+            "id" : "rhh68wu0r5iefa5ne6i23ibpc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.7012286787045776,
+              "y" : 4.481961618353041
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ ]
+        }, {
+          "id" : "t7egcsamwia9ugrz25nunq8ya",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "8z49u1mii2hnem4kspzquhaxa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.027539961519189,
+              "y" : 3.658534152024439
+            }
+          }, {
+            "id" : "s2mamw4zk7ixh6eggss12pa2d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 6.030166476447641,
+              "y" : 0.9743610015707623
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ {
+            "id" : "0sthgf5mnq1teht7zracusfqa",
+            "width" : 1.7480497858214386,
+            "relativeCenter" : 0.6558997944384358,
+            "type" : "window",
+            "height" : 1.3950000405311584,
+            "lowerElevation" : 1.0219999551773071,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          } ]
+        }, {
+          "id" : "wz010e5fz0n16dpsntusr9tzd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "z9yinp282uxbsmta80yg6bq4a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9938199191735979,
+              "y" : 4.482238570096249
+            }
+          }, {
+            "id" : "85q5xdc9194hnb6hcmxah9n5a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9927292952962471,
+              "y" : 5.635164298333662
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.09,
+          "openings" : [ {
+            "id" : "7594g0q559u391tmpckngiqwc",
+            "width" : 0.8021178330252212,
+            "relativeCenter" : 0.6091173212186927,
+            "type" : "doorway",
+            "height" : 2.0400107502937317,
+            "lowerElevation" : -0.0026592016220092773,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          } ]
+        }, {
+          "id" : "57x6xmu6eszfn7u36xas2aytd",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "ruikywwcs1ee66yp7fgkzyshc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 1.0480115174347069,
+              "y" : 3.212788201170976
+            }
+          }, {
+            "id" : "4dcc2kdntc7ncsx98u84sy15b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 1.048649332880905,
+              "y" : 2.55949744840727
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "7zmkungrikzw6qz1yr9dhdp1b",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "ruikywwcs1ee66yp7fgkzyshc",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 1.0480115174347069,
+              "y" : 3.212788201170976
+            }
+          }, {
+            "id" : "mimzfmas7m2gqzft5k9kn5iwd",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.702429422698707,
+              "y" : 3.2124531622217316
+            }
+          } ],
+          "centerLineBias" : 0.6900000000000001,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "a814qfqbfr8ya35x3zmtd9fma",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "4dcc2kdntc7ncsx98u84sy15b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 1.048649332880905,
+              "y" : 2.55949744840727
+            }
+          }, {
+            "id" : "bxaayi8rtikt1afneenafah0d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.283379611008996,
+              "y" : 2.560699955663901
+            }
+          } ],
+          "centerLineBias" : 0.30999999999999994,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        }, {
+          "id" : "7remfb6e9frxd2kzaiysr37ca",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "6znrwncpx31duw4k1fabf9x5d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.281207773428926,
+              "y" : 4.7644076761792284
+            }
+          }, {
+            "id" : "88ei2s24hhx6tqg00zs5cpd9b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.282311589316008,
+              "y" : 3.6548684078705067
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ {
+            "id" : "8bsqynawm2w34tpnnwgtpirqd",
+            "width" : 0.766281971476713,
+            "relativeCenter" : 0.5686839928378395,
+            "type" : "doorway",
+            "height" : 2.0377007722854614,
+            "lowerElevation" : -0.001510024070739746,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          } ]
+        }, {
+          "id" : "k1g9xznisf3saqwc6k31fu9ma",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "bxaayi8rtikt1afneenafah0d",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.283379611008996,
+              "y" : 2.560699955663901
+            }
+          }, {
+            "id" : "88ei2s24hhx6tqg00zs5cpd9b",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 2.282311589316008,
+              "y" : 3.6548684078705067
+            }
+          } ],
+          "centerLineBias" : 0.5,
+          "thickness" : 0.1,
+          "openings" : [ {
+            "id" : "m3gc66ggsz1h228maw0zrs0nb",
+            "width" : 0.7423024319264446,
+            "relativeCenter" : 0.5524609866943055,
+            "type" : "doorway",
+            "height" : 2.010999917984009,
+            "lowerElevation" : -0.001000046730041504,
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            }
+          } ]
+        }, {
+          "id" : "r10xdhiycwapfybd08zstx3ib",
+          "layer" : {
+            "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "type" : "wall",
+          "vertices" : [ {
+            "id" : "3rs1yemmqdqbf9gasy5ds9xpa",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9919258060302663,
+              "y" : 6.48754943256104
+            }
+          }, {
+            "id" : "85q5xdc9194hnb6hcmxah9n5a",
+            "layer" : {
+              "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "position" : {
+              "x" : 0.9927292952962471,
+              "y" : 5.635164298333662
+            }
+          } ],
+          "centerLineBias" : 0.71,
+          "thickness" : 0.16,
+          "openings" : [ ]
+        } ]
+      } ],
+      "rooms" : [ {
+        "id" : "613htqkzf66zz7hf7n8kzszed",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "00258k0mqu8750du151be805c",
+          "confidence" : 1.0,
+          "label" : "Dining Room"
+        }, {
+          "id" : "zgh2304w5anu0t25ia06ytfxd",
+          "confidence" : 1.0,
+          "label" : "Kitchen"
+        }, {
+          "id" : "w4tdggk5i5u2zpiryugktghgb",
+          "confidence" : 1.0,
+          "label" : "Living Room"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "cttpdf9wegnmh8cb5txtb8ebd"
+          }, {
+            "id" : "niwep7r4si1indbc3t8a4kh1a"
+          }, {
+            "id" : "w0o460w9brt"
+          }, {
+            "id" : "1bhtef4gbzud6ruyrb9qpu4zc"
+          }, {
+            "id" : "tzilf1vpbk8"
+          }, {
+            "id" : "xchbhyerah43xy8i4pg64uwdb"
+          }, {
+            "id" : "xdw8f469ipb0hh13h8i10eeaa"
+          }, {
+            "id" : "g6cm64fx7cu4r7khu4gb0n3ua"
+          }, {
+            "id" : "iyfxgz9wr3ewnezwdr8371b9a"
+          }, {
+            "id" : "kym736k4dc9xcqgshikhf794b"
+          }, {
+            "id" : "p6ns9p4426chrhy57gh3bbq0d"
+          }, {
+            "id" : "0ehhfeh9hriaecsm2zx0wdk8a"
+          }, {
+            "id" : "az4rc47ady2hx7czpgqi6fbbd"
+          }, {
+            "id" : "z094q66phb0mcy88xckkrdusd"
+          }, {
+            "id" : "ih4r4xmrx5qy96nzaadzac7id"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 319.18655883612433,
+          "areaIndoor" : 319.18655883612433,
+          "width" : 20.50300741444921,
+          "depth" : 17.77537101915491,
+          "height" : 7.8905997580203655,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : -3.2211790486394456,
+                "y" : 3.3603302295689286,
+                "z" : -0.006739442646503453
+              },
+              "height" : 7.890600015172958
+            } ]
+          } ],
+          "maxHeight" : 7.890600015172958,
+          "minHeight" : 7.890600015172958
+        },
+        "label" : "",
+        "keywords" : [ "indoor" ]
+      }, {
+        "id" : "fwci5v8y9wi",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "cqig2yw0p8q99t5n02w1kf40b",
+          "confidence" : 1.0,
+          "label" : "Exterior"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "3its96mrcjw"
+          }, {
+            "id" : "tzilf1vpbk8"
+          }, {
+            "id" : "m96p47nn8kst7xnxuky8qbkhb"
+          }, {
+            "id" : "1s6a4u6y78fwx3u4z0n9x7p0c"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 45.93056213963255,
+          "areaIndoor" : null,
+          "width" : 6.462476662107738,
+          "depth" : 7.105728407996778,
+          "height" : 7.963285274099268,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : -6.668710211476887,
+                "y" : 4.0763368127829445,
+                "z" : -0.03944058567285538
+              },
+              "height" : 7.9632856133842465
+            } ]
+          } ],
+          "maxHeight" : 7.9632856133842465,
+          "minHeight" : 7.9632856133842465
+        },
+        "label" : "",
+        "keywords" : [ "outdoor" ]
+      }, {
+        "id" : "cdz3fkt38kae7tapstpt0eaeb",
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "pnf0xzq61xcegack4iai7xppd",
+          "confidence" : 0.9563227295875549,
+          "label" : "Bedroom"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "3i77ufw234fm730765qtanf2c"
+          }, {
+            "id" : "5wn4p064ywxre3zmsq7k3ua3b"
+          }, {
+            "id" : "w5sqmkzkf2z8tm1yzy1n4nfpd"
+          }, {
+            "id" : "m6hbmbirrk7b7wtn3gngti0nc"
+          }, {
+            "id" : "w68siw6yxr224pfmm12diuwwd"
+          }, {
+            "id" : "7remfb6e9frxd2kzaiysr37ca"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 94.63076662038496,
+          "areaIndoor" : 94.63076662038496,
+          "width" : null,
+          "depth" : null,
+          "height" : 7.874015530672073,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : 4.3389997482299805,
+                "y" : 5.029003620147705,
+                "z" : 0.0035584636337251396
+              },
+              "height" : 7.872889140592627
+            } ]
+          } ],
+          "maxHeight" : 7.872889140592627,
+          "minHeight" : 7.872889140592627
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ]
+      }, {
+        "id" : "xy2x8mpaaqknp7q2c3nnbw1ma",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "pnf0xzq61xcegack4iai7xppd",
+          "confidence" : 0.944905161857605,
+          "label" : "Bedroom"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "gbt8a3zxfuxih6m6f50ms9pnc"
+          }, {
+            "id" : "echc0bkg4kz00qk428psnhw2b"
+          }, {
+            "id" : "kw0g83b36e109qdmke9d9fg4b"
+          }, {
+            "id" : "5wn4p064ywxre3zmsq7k3ua3b"
+          }, {
+            "id" : "bd2xsbbyw8hbndc2rsac5f75c"
+          }, {
+            "id" : "t7egcsamwia9ugrz25nunq8ya"
+          }, {
+            "id" : "k1g9xznisf3saqwc6k31fu9ma"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 101.37691800747012,
+          "areaIndoor" : 101.37691800747012,
+          "width" : 11.960730073310858,
+          "depth" : 8.51237183533396,
+          "height" : 7.906823899383545,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : 4.139998912811279,
+                "y" : 2.3029987812042236,
+                "z" : -0.01166212073289552
+              },
+              "height" : 7.907196987585537
+            } ]
+          } ],
+          "maxHeight" : 7.907196987585537,
+          "minHeight" : 7.907196987585537
+        },
+        "label" : null,
+        "keywords" : [ "indoor" ]
+      }, {
+        "id" : "tt6gm2a0463x9wmnx7rn6gugc",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "yeh1aa32fwgm72bh0g92ebruc",
+          "confidence" : 1.0,
+          "label" : "Hallway"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "kym736k4dc9xcqgshikhf794b"
+          }, {
+            "id" : "73qbswtdupye401u0ht8kg17c"
+          }, {
+            "id" : "ifxq0yd03deguix6dkfyhxg5d"
+          }, {
+            "id" : "qq0s98b8ycrfrhe88c3e2he8a"
+          }, {
+            "id" : "wz010e5fz0n16dpsntusr9tzd"
+          }, {
+            "id" : "57x6xmu6eszfn7u36xas2aytd"
+          }, {
+            "id" : "7zmkungrikzw6qz1yr9dhdp1b"
+          }, {
+            "id" : "a814qfqbfr8ya35x3zmtd9fma"
+          }, {
+            "id" : "7remfb6e9frxd2kzaiysr37ca"
+          }, {
+            "id" : "k1g9xznisf3saqwc6k31fu9ma"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 40.71118385034964,
+          "areaIndoor" : 40.71118385034964,
+          "width" : 4.659673910512642,
+          "depth" : 9.76542712852047,
+          "height" : 7.897873283917618,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : 1.536675920916327,
+                "y" : 3.811735899467405,
+                "z" : 0.001955690383911128
+              },
+              "height" : 7.8978730336093905
+            } ]
+          } ],
+          "maxHeight" : 7.8978730336093905,
+          "minHeight" : 7.8978730336093905
+        },
+        "label" : "",
+        "keywords" : [ "indoor" ]
+      }, {
+        "id" : "h26t7ky77ew74yb0pg8qqf5rd",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "ua1m0u8pm3yngrhzwec1ue5zc",
+          "confidence" : 1.0,
+          "label" : "Bathroom"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "cttpdf9wegnmh8cb5txtb8ebd"
+          }, {
+            "id" : "niwep7r4si1indbc3t8a4kh1a"
+          }, {
+            "id" : "p6ns9p4426chrhy57gh3bbq0d"
+          }, {
+            "id" : "64heqgi9rs6cbcinqw48c1uyd"
+          }, {
+            "id" : "8nkrxht9p1860ukxss4pn30ha"
+          }, {
+            "id" : "qq0s98b8ycrfrhe88c3e2he8a"
+          }, {
+            "id" : "wz010e5fz0n16dpsntusr9tzd"
+          }, {
+            "id" : "r10xdhiycwapfybd08zstx3ib"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 39.45068758798185,
+          "areaIndoor" : 39.45068758798185,
+          "width" : 6.306837615440865,
+          "depth" : 6.2523529037109915,
+          "height" : 7.88266725562569,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : -0.0021235391739475307,
+                "y" : 5.462905805030677,
+                "z" : 0.0018556281924247686
+              },
+              "height" : 7.882667590999604
+            } ]
+          } ],
+          "maxHeight" : 7.882667590999604,
+          "minHeight" : 7.882667590999604
+        },
+        "label" : "",
+        "keywords" : [ "indoor" ]
+      }, {
+        "id" : "3m54yff1z7crxaywd8if9rb0d",
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c"
+        },
+        "floor" : {
+          "id" : "tsmq1wak12rhgn0mawksxcwcd"
+        },
+        "classifications" : [ {
+          "id" : "rmu8pikcye0n7n9fsu5e4acda",
+          "confidence" : 1.0,
+          "label" : "Entrance"
+        } ],
+        "boundary" : {
+          "edges" : [ {
+            "id" : "y33n9sewccy0u7kgmp62eyhfa"
+          }, {
+            "id" : "738k3p4p6kxuw1hskshdmcmhb"
+          }, {
+            "id" : "z094q66phb0mcy88xckkrdusd"
+          }, {
+            "id" : "2cg4zizzy8uizz3c84490scid"
+          } ]
+        },
+        "holes" : [ ],
+        "dimensionEstimates" : {
+          "area" : 19.60941935770996,
+          "areaIndoor" : 19.60941935770996,
+          "width" : 3.944899631625683,
+          "depth" : 4.970833148404165,
+          "height" : 7.8668218237664105,
+          "units" : "imperial"
+        },
+        "ceiling" : {
+          "planes" : [ {
+            "measurements" : [ {
+              "bottom" : {
+                "x" : 0.07763343252524424,
+                "y" : 0.1448074540928158,
+                "z" : -0.005752323567867285
+              },
+              "height" : 7.866821515769958
+            } ]
+          } ],
+          "maxHeight" : 7.866821515769958,
+          "minHeight" : 7.866821515769958
+        },
+        "label" : "",
+        "keywords" : [ "indoor" ]
+      } ]
+    }
+  }
+}

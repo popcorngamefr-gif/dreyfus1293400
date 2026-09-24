@@ -1,0 +1,28 @@
+{
+  "required":   [
+    "badNeighbors",
+    "goodNeighbors"
+  ],
+  "config":   {
+    "badNeighbors":     {
+      "title": "disabled connections (JSON)",
+      "description": "The list of disabled connections should update automatically.",
+      "type": "string",
+      "ui:subscribeTo": "disabled-connections",
+      "default": "{}"
+    },
+    "goodNeighbors":     {
+      "title": "added connections (JSON)",
+      "description": "The list of enabled connections should update automatically.",
+      "type": "string",
+      "ui:subscribeTo": "enabled-connections",
+      "default": "[]"
+    }
+  },
+  "outputs": {"disabled-connections": {"access": ["public"]}},
+  "description": "With this window open, click sweep orbs to display connections.\n\n Click on a connection to toggle them. \n\n In Showcase, disabled connections will not be traversable while the plugin is enabled.",
+  "options":   {
+    "icon": true,
+    "hideViewToggle": true
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "data" : {
+    "model" : {
+      "id" : "JgaZQe7xn5N",
+      "mattertags" : [ ],
+      "orderedLists" : [ ],
+      "labels" : [ ],
+      "measurementPaths" : [ ],
+      "activeHighlightReel" : null,
+      "image" : {
+        "id" : "JpSGeDnGkVH",
+        "label" : "Living Room",
+        "classification" : "Living Room",
+        "category" : "snapshot",
+        "height" : 4320,
+        "width" : 7680,
+        "created" : "2026-08-22T15:44:06Z",
+        "modified" : "2026-08-22T15:44:07Z",
+        "status" : "available",
+        "filename" : "Living-Room.jpg",
+        "format" : "image",
+        "url" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1",
+        "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+        "type" : "photo2D",
+        "origin" : "vision",
+        "validUntil":"2099-01-01T10:16:12Z",
+        "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1&width=200&height=140&fit=crop&disable=upscale",
+        "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1&width=1920&height=1080&fit=crop&disable=upscale",
+        "snapshotLocation" : {
+          "viewMode" : "panorama",
+          "position" : {
+            "x" : -2.169158935546875,
+            "y" : 4.155147075653076,
+            "z" : 1.1859312057495117
+          },
+          "rotation" : {
+            "x" : -0.15590039500488873,
+            "y" : 0.7281563003099305,
+            "z" : -0.6526542033537961,
+            "w" : 0.1397351846633178
+          },
+          "zoom" : 1.0,
+          "floorVisibility" : [ ],
+          "anchor" : {
+            "id" : "44d0x97nm7idgtdu8p48i8u3a",
+            "pano" : {
+              "id" : "44d0x97nm7idgtdu8p48i8u3a",
+              "placement" : "auto"
+            }
+          }
+        }
+      }
+    },
+    "view" : {
+      "layers" : [ {
+        "layer" : {
+          "id" : "rcqcuc0fk1s9yx6sqhg82e5gd",
+          "created" : "2026-08-22T14:50:36Z",
+          "modified" : "2026-08-22T15:44:10Z",
+          "type" : "matterport.user.data",
+          "name" : "matterport.user.data",
+          "label" : ""
+        },
+        "position" : 0,
+        "visible" : true
+      }, {
+        "layer" : {
+          "id" : "6ni0fcwm8m78m57xsskmixu0c",
+          "created" : "2026-08-24T14:30:15Z",
+          "modified" : "2026-08-24T14:32:01Z",
+          "type" : "matterport.proxy.common",
+          "name" : "matterport.proxy.common",
+          "label" : "proxy-aaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "position" : 1,
+        "visible" : true
+      }, {
+        "layer" : {
+          "id" : "aaaaaaaaaaaaaaaaaaaaaaaaa",
+          "created" : "2026-08-22T14:50:36Z",
+          "modified" : "2026-08-24T14:30:21Z",
+          "type" : "matterport.base",
+          "name" : null,
+          "label" : ""
+        },
+        "position" : 2,
+        "visible" : true
+      } ]
+    }
+  }
+}

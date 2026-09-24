@@ -1,0 +1,61 @@
+{
+  "config":   {
+    "north":     {
+      "description": "Face \"north\" in the 3D view and click \"Set North.\"",
+      "type": "number",
+      "maximum": 360,
+      "minimum": 0,
+      "default": 0,
+      "title": "rotation (degrees)",
+      "ui:buttonOperation": "Camera.getPose",
+      "ui:buttonText": "Set North"
+    },
+    "size":     {
+      "description": "How big is the map?",
+      "type": "integer",
+      "ui:widget": "slider",
+      "maximum": 4,
+      "minimum": 0,
+      "default": 2
+    },
+    "display":     {
+      "description": "How should the map appear superimposed?",
+      "type": "string",
+      "default": "circle",
+      "enum":       [
+        "square",
+        "circle",
+        "no-background"
+      ]
+    },
+    "position":     {
+      "description": "Where should the map be positioned?",
+      "type": "string",
+      "default": "top-right",
+      "enum":       [
+        "top-right",
+        "bottom-right",
+        "top-left",
+        "bottom-left"
+      ]
+    },
+    "zoom":     {
+      "description": "How zoomed in is the map?",
+      "type": "integer",
+      "ui:widget": "slider",
+      "maximum": 4,
+      "default": 2,
+      "minimum": 0
+    },
+    "disableInTours":     {
+      "description": "Disable minimap when playing highlight reel?",
+      "title": "Disable in tours",
+      "type": "boolean"
+    }
+  },
+  "description": "Provides a customizable display showing where the current view is located in the larger space.",
+  "options":   {
+    "mlsEnabled": true,
+    "icon": true
+  }
+}

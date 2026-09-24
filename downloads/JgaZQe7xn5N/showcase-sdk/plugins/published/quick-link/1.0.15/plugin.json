@@ -1,0 +1,23 @@
+{
+  "config":   {
+    "text":     {
+      "title": "Text",
+      "description": "What text should be displayed?",
+      "type": "string"
+    },
+    "url":     {
+      "title": "URL",
+      "description": "What URL should the link open?",
+      "type": "string",
+      "format": "url"
+    },
+    "photoUrl":     {
+      "title": "Photo",
+      "type": "string",
+      "ui:field": "imageUpload",
+      "description": "What image should the link show?"
+    }
+  },
+  "description": "Shows an image and a link in a corner.",
+  "options": {"icon": true}
+}

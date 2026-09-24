@@ -1,0 +1,96 @@
+{
+  "config":   {
+    "exposure":     {
+      "title": "Exposure",
+      "type": "number",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-exposure",
+      "maximum": 2,
+      "minimum": -2,
+      "multipleOf": 0.01,
+      "default": 0
+    },
+    "contrast":     {
+      "title": "Contrast",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-contrast",
+      "ui:units": "%",
+      "maximum": 150,
+      "minimum": 50,
+      "multipleOf": 1,
+      "default": 100
+    },
+    "highlights":     {
+      "title": "Highlights",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-highlights",
+      "maximum": 100,
+      "minimum": -100,
+      "multipleOf": 1,
+      "default": 0
+    },
+    "shadows":     {
+      "title": "Shadows",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-shadows",
+      "maximum": 100,
+      "minimum": -100,
+      "multipleOf": 1,
+      "default": 0
+    },
+    "temperature":     {
+      "title": "Temperature",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-temperature",
+      "maximum": 100,
+      "minimum": -100,
+      "multipleOf": 1,
+      "default": 0
+    },
+    "saturation":     {
+      "title": "Saturation",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:slider":       {
+        "showLiveValue": "label",
+        "marks": false
+      },
+      "ui:icon": "cg-saturation",
+      "ui:units": "%",
+      "maximum": 200,
+      "minimum": 0,
+      "multipleOf": 1,
+      "default": 100
+    }
+  },
+  "description": "Color Adjustments is currently in public beta. [Send Feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=yudkmj82HESap0-Fl3wJ8difbb_EVe1DtkVaLrbN7BdUMzlZVDVNNDlPTkdOQUhXVThWRUJJWkhBUy4u).",
+  "options":   {
+    "mlsEnabled": true,
+    "icon": true,
+    "hideViewToggle": true
+  }
+}

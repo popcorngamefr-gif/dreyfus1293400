@@ -1,0 +1,44 @@
+{
+  "required":   [
+    "position",
+    "rotation",
+    "scale"
+  ],
+  "config":   {
+    "position":     {
+      "title": "Position",
+      "description": "position info.",
+      "type": "string",
+      "ui:subscribeTo": "position-updates",
+      "default": "{ \"x\":0, \"y\":0, \"z\":0 }"
+    },
+    "rotation":     {
+      "title": "Rotation",
+      "description": "rotation info.",
+      "type": "string",
+      "ui:subscribeTo": "rotation-updates",
+      "default": "{ \"x\":0, \"y\":0, \"z\":0 }"
+    },
+    "scale":     {
+      "title": "Scale",
+      "description": "scale info.",
+      "type": "string",
+      "ui:subscribeTo": "scale-updates",
+      "default": "{ \"x\":1, \"y\":1, \"z\":1 }"
+    },
+    "url":     {
+      "description": "The url to the glb",
+      "type": "string",
+      "format": "url",
+      "title": "GLB url"
+    }
+  },
+  "outputs":   {
+    "position-updates": {"access": ["public"]},
+    "rotation-updates": {"access": ["public"]},
+    "scale-updates": {"access": ["public"]}
+  },
+  "description": "Facade.",
+  "options": {"canPlaceInGrid": false},
+  "peerDependencies": {"three": "0.171"}
+}

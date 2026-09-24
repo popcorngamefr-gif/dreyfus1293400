@@ -1,0 +1,35 @@
+{
+  "description": "Displays a pop-up card that render/play audios configured per room.",
+  "config": {"roomsAudio":   {
+    "default": [],
+    "type": "array",
+    "title": "List of audio per room",
+    "description": "The list of audio that will be played for a given room",
+    "items":     {
+      "type": "object",
+      "properties":       {
+        "roomId":         {
+          "type": "string",
+          "title": "Room",
+          "ui:buttonText": "Pick Room",
+          "ui:buttonOperation": "Sweep.current:roomInfo:id",
+          "description": "ID of the room where the audio will be played"
+        },
+        "audioAttachmentId":         {
+          "type": "string",
+          "title": "Audio",
+          "ui:widget": "attachment",
+          "description": "ID of the audio attachment to play"
+        }
+      },
+      "required":       [
+        "roomId",
+        "audioAttachmentId"
+      ]
+    }
+  }},
+  "peerDependencies":   {
+    "react": "18",
+    "react-dom": "18"
+  }
+}

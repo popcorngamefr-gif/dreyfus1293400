@@ -1,0 +1,149 @@
+{
+  "data" : {
+    "roomClassifications" : [ {
+      "id" : "ge0tcan3iztta5mtgsfx99xpb",
+      "label" : "Balcony",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "4by2d70b54srbin43t5m0yh9c",
+      "label" : "Basement",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "ua1m0u8pm3yngrhzwec1ue5zc",
+      "label" : "Bathroom",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "pnf0xzq61xcegack4iai7xppd",
+      "label" : "Bedroom",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "y3xuprmywgrprnm0273u3pphd",
+      "label" : "Bonus Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "zp189tx2hdrry8k5nhaq5x45d",
+      "label" : "Closet",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "4gp8x21ni4i8y19r9pm4rb35a",
+      "label" : "Den",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "00258k0mqu8750du151be805c",
+      "label" : "Dining Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "91naa1k3hiim9z4mk8352enta",
+      "label" : "Driveway",
+      "defaultKeywords" : [ "outdoor" ]
+    }, {
+      "id" : "rmu8pikcye0n7n9fsu5e4acda",
+      "label" : "Entrance",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "66psa4tqgazbnffr9huy2dnpd",
+      "label" : "Exercise Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "cqig2yw0p8q99t5n02w1kf40b",
+      "label" : "Exterior",
+      "defaultKeywords" : [ "outdoor" ]
+    }, {
+      "id" : "4qq4e5hz84hcur7ry87uhtmua",
+      "label" : "Facade",
+      "defaultKeywords" : [ "nonArea" ]
+    }, {
+      "id" : "mx6e2yfk0tg0zbkbzuw5mhkda",
+      "label" : "Family Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "0gnuunpwx63dmmqeq64aqfiyd",
+      "label" : "Game Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "izt39gytcbymc0qtd37nrb7xb",
+      "label" : "Garage",
+      "defaultKeywords" : [ "indoor", "nonArea" ]
+    }, {
+      "id" : "ei3kmtun2xpspbg3d5ff3t3zc",
+      "label" : "Garden",
+      "defaultKeywords" : [ "outdoor" ]
+    }, {
+      "id" : "xwhhz63a0hw735qf81knp63ha",
+      "label" : "Great Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "ywtddu9hagraxhznwinn8t4zb",
+      "label" : "Gym",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "yeh1aa32fwgm72bh0g92ebruc",
+      "label" : "Hallway",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "zgh2304w5anu0t25ia06ytfxd",
+      "label" : "Kitchen",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "pr9h4zy7eak91f3b7un97u42c",
+      "label" : "Laundry",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "gqqw1zac1hzg1p8622ducg3zb",
+      "label" : "Library",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "w4tdggk5i5u2zpiryugktghgb",
+      "label" : "Living Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "e6md2spaqemc448pmau3azkhd",
+      "label" : "Loft",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "a11d2gi43h0etwedw0mx9pgwd",
+      "label" : "Media Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "ag5uphha72sak65qazgsp09yd",
+      "label" : "Office",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "byp7pz2tmt4ff47nhfx0uwzec",
+      "label" : "Other",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "2nx6maxxpaeut7kx96fuacdzc",
+      "label" : "Pantry",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "n07hhs9gky4cgrh7q65s9rp0d",
+      "label" : "Patio",
+      "defaultKeywords" : [ "indoor", "nonArea" ]
+    }, {
+      "id" : "s1h0hb8tpcc9i35dmupknsega",
+      "label" : "Pool",
+      "defaultKeywords" : [ "outdoor" ]
+    }, {
+      "id" : "gba8cq0s2rdfg1zdb1epwty7d",
+      "label" : "Sauna",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "0an2rky24gb91fdnpzmbwadib",
+      "label" : "Staircase",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "qa21tqcsinnxde9gdmiphacza",
+      "label" : "Utility Room",
+      "defaultKeywords" : [ "indoor" ]
+    }, {
+      "id" : "k4ww3sk359ntmwgr8s75hq22a",
+      "label" : "Void",
+      "defaultKeywords" : [ "nonArea", "hide" ]
+    }, {
+      "id" : "nqw75004dcg2bcr41047rhg6c",
+      "label" : "Workshop",
+      "defaultKeywords" : [ "indoor" ]
+    } ]
+  }
+}

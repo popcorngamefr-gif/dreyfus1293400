@@ -1,0 +1,90 @@
+{
+  "config":   {
+    "theme":     {
+      "title": "Theme",
+      "description": "Select a color theme",
+      "type": "string",
+      "default": "dark",
+      "enum":       [
+        "dark",
+        "glass",
+        "blueprint",
+        "transparent"
+      ]
+    },
+    "coloredRooms":     {
+      "title": "Colored Rooms",
+      "description": "Display rooms with categorized colors",
+      "type": "boolean"
+    },
+    "position":     {
+      "title": "Screen Position",
+      "description": "Select minimap position",
+      "type": "string",
+      "default": "top-right",
+      "enum":       [
+        "top-right",
+        "bottom-right",
+        "top-left",
+        "bottom-left"
+      ]
+    },
+    "locationMarker":     {
+      "title": "Location Marker",
+      "description": "Choose current location icon",
+      "type": "string",
+      "default": "chevron",
+      "enum":       [
+        "chevron",
+        "classic"
+      ]
+    },
+    "size":     {
+      "title": "Width",
+      "description": "Maximum map size",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:units": "px",
+      "maximum": 600,
+      "minimum": 300,
+      "default": 450,
+      "multipleOf": 10
+    },
+    "navigationMode":     {
+      "description": "Focus on current position, ideal for larger spaces.",
+      "title": "Enable Navigation Mode - Center map on current position",
+      "type": "boolean"
+    },
+    "zoom":     {
+      "title": "Navigation Mode Zoom",
+      "description": "Zoom for Navigation Mode",
+      "type": "integer",
+      "ui:widget": "rcSlider",
+      "ui:units": "%",
+      "maximum": 400,
+      "minimum": 100,
+      "multipleOf": 10,
+      "default": 250
+    },
+    "mobileMinimize":     {
+      "description": "User can unhide with the visibility tool",
+      "title": "Hide on Mobile Devices",
+      "type": "boolean",
+      "default": true
+    },
+    "disableInTours":     {
+      "description": "Hide during guided tour mode.",
+      "title": "Hide during Guided Tours",
+      "type": "boolean"
+    }
+  },
+  "description": "",
+  "options":   {
+    "mlsEnabled": true,
+    "icon": true
+  },
+  "peerDependencies":   {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

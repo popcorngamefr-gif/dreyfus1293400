@@ -1,0 +1,7 @@
+{
+  "required": [],
+  "config": {"scene":   {
+    "description": "Scene JSON",
+    "type": "string"
+  }}
+}

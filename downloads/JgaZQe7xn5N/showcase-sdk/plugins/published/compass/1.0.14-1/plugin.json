@@ -1,0 +1,51 @@
+{
+  "config":   {
+    "north":     {
+      "description": "Face \"north\" in the 3D view and click \"Set North.\"",
+      "type": "number",
+      "maximum": 360,
+      "minimum": 0,
+      "default": 0,
+      "title": "rotation (degrees)",
+      "ui:buttonOperation": "Camera.getPose",
+      "ui:buttonText": "Set North"
+    },
+    "size":     {
+      "description": "What size should the compass be?",
+      "type": "number",
+      "ui:widget": "slider",
+      "maximum": 4,
+      "minimum": 0
+    },
+    "style":     {
+      "description": "How should the compass arrow look?",
+      "type": "string",
+      "enum":       [
+        "analog",
+        "arrow",
+        "minimal"
+      ]
+    },
+    "disableInTours":     {
+      "description": "Disable compass when playing highlight reel?",
+      "type": "boolean",
+      "title": "Disable in tours"
+    },
+    "position":     {
+      "description": "Where should the compass be positioned?",
+      "type": "string",
+      "default": "top-left",
+      "enum":       [
+        "top-right",
+        "bottom-right",
+        "bottom-left",
+        "top-left"
+      ]
+    }
+  },
+  "description": "Shows a customizable gauge indicating which direction is north relative to the current viewport.",
+  "options":   {
+    "mlsEnabled": true,
+    "icon": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "data" : {
+    "model" : {
+      "id" : "JgaZQe7xn5N",
+      "name" : "16 Rue Pierre Dreyfus",
+      "visibility" : "public",
+      "discoverable" : true,
+      "state" : "active",
+      "image" : {
+        "id" : "JpSGeDnGkVH",
+        "label" : "Living Room",
+        "classification" : "Living Room",
+        "category" : "snapshot",
+        "height" : 4320,
+        "width" : 7680,
+        "created" : "2026-08-22T15:44:06Z",
+        "modified" : "2026-08-22T15:44:07Z",
+        "status" : "available",
+        "filename" : "Living-Room.jpg",
+        "format" : "image",
+        "url" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1",
+        "resolutions" : [ "icon", "thumbnail", "preview", "web", "presentation", "original" ],
+        "type" : "photo2D",
+        "origin" : "vision",
+        "validUntil" : "2026-09-24T10:16:12Z",
+        "thumbnailUrl" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1&width=200&height=140&fit=crop&disable=upscale",
+        "presentationUrl" : "https://cdn-2.matterport.com/apifs/models/JgaZQe7xn5N/images/JpSGeDnGkVH/JpSGeDnGkVH-Living_Room.jpg?t=2-3d29107e366ef3ad8f3649a940ab37aa5eea1fd0-1790244972-1&width=1920&height=1080&fit=crop&disable=upscale",
+        "snapshotLocation" : {
+          "viewMode" : "panorama",
+          "position" : {
+            "x" : -2.169158935546875,
+            "y" : 4.155147075653076,
+            "z" : 1.1859312057495117
+          },
+          "rotation" : {
+            "x" : -0.15590039500488873,
+            "y" : 0.7281563003099305,
+            "z" : -0.6526542033537961,
+            "w" : 0.1397351846633178
+          },
+          "zoom" : 1.0,
+          "floorVisibility" : [ ],
+          "anchor" : {
+            "id" : "44d0x97nm7idgtdu8p48i8u3a",
+            "pano" : {
+              "id" : "44d0x97nm7idgtdu8p48i8u3a",
+              "placement" : "auto"
+            }
+          }
+        }
+      },
+      "publication" : {
+        "address" : "6 Rue Nadia Guendouz, 93400 Saint-Ouen-sur-Seine, FR",
+        "published" : true,
+        "lastPublished" : null,
+        "presentedBy" : "",
+        "summary" : "",
+        "description" : "",
+        "externalUrl" : null,
+        "contact" : {
+          "name" : "",
+          "email" : "",
+          "phoneNumber" : null
+        }
+      },
+      "options" : {
+        "urlBrandingEnabled" : true,
+        "socialSharingEnabled" : true,
+        "vrEnabled" : true
+      },
+      "assets" : {
+        "meshes" : [ {
+          "id" : "meshes/9qk8wegm3q165zfs24pm58xdc",
+          "status" : "available",
+          "filename" : "b55d44c925d64027b67d4b2830f6c436_50k.dam",
+          "format" : "dam",
+          "resolution" : "50k",
+          "url" : "https://cdn-2.matterport.com/models/7b65e66514b54366b3a13fe422755cf4/assets/b55d44c925d64027b67d4b2830f6c436_50k.dam?t=2-9b3774bbd5bcf6507ca1182291232bbbb971df62-1790244972-1",
+          "validUntil" : "2026-09-24T10:16:12Z"
+        } ],
+        "textures" : [ {
+          "id" : "50k-low",
+          "status" : "available",
+          "format" : "jpg",
+          "resolution" : "50k",
+          "quality" : "low",
+          "urlTemplate" : "https://cdn-2.matterport.com/models/7b65e66514b54366b3a13fe422755cf4/assets/~/b55d44c925d64027b67d4b2830f6c436_50k_texture_jpg_low/b55d44c925d64027b67d4b2830f6c436_50k_<texture>.jpg?t=2-7aaff0f2c6012d88bdc646900d38df4b1e69601a-1790244972-0&k=models%2F7b65e66514b54366b3a13fe422755cf4%2Fassets",
+          "validUntil" : "2026-09-24T10:16:12Z"
+        }, {
+          "id" : "50k-high",
+          "status" : "available",
+          "format" : "jpg",
+          "resolution" : "50k",
+          "quality" : "high",
+          "urlTemplate" : "https://cdn-2.matterport.com/models/7b65e66514b54366b3a13fe422755cf4/assets/~/b55d44c925d64027b67d4b2830f6c436_50k_texture_jpg_high/b55d44c925d64027b67d4b2830f6c436_50k_<texture>.jpg?t=2-7aaff0f2c6012d88bdc646900d38df4b1e69601a-1790244972-0&k=models%2F7b65e66514b54366b3a13fe422755cf4%2Fassets",
+          "validUntil" : "2026-09-24T10:16:12Z"
+        } ],
+        "tilesets" : [ {
+          "status" : "available",
+          "tilesetVersion" : "1.2.0",
+          "url" : "https://cdn-2.matterport.com/models/7b65e66514b54366b3a13fe422755cf4/assets/mesh_tiles/~/tileset.json?t=2-a7811ee7efff7f71ca7bfc8e70e8b02ecc417386-1790244972-1&k=models%2F7b65e66514b54366b3a13fe422755cf4%2Fassets%2Fmesh_tiles",
+          "urlTemplate" : "https://cdn-2.matterport.com/models/7b65e66514b54366b3a13fe422755cf4/assets/mesh_tiles/~/<file>?t=2-a7811ee7efff7f71ca7bfc8e70e8b02ecc417386-1790244972-1&k=models%2F7b65e66514b54366b3a13fe422755cf4%2Fassets%2Fmesh_tiles",
+          "validUntil" : "2026-09-24T10:16:12Z",
+          "tilesetDepth" : 3,
+          "tilesetPreset" : "basic2"
+        } ]
+      },
+      "lod" : {
+        "options" : [ "lod2" ]
+      },
+      "overlayLayers" : [ ],
+      "baseView" : {
+        "model" : {
+          "id" : "JgaZQe7xn5N"
+        }
+      },
+      "defurnishViews" : [ ],
+      "legacyBaseView" : null
+    }
+  }
+}

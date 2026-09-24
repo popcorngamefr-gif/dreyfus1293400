@@ -1,0 +1,45 @@
+{
+  "data" : {
+    "model" : {
+      "id" : "JgaZQe7xn5N",
+      "publication" : {
+        "options" : {
+          "contactEmail" : true,
+          "contactName" : true,
+          "contactPhone" : true,
+          "modelName" : true,
+          "modelSummary" : true,
+          "presentedBy" : true,
+          "address" : true,
+          "externalUrl" : true
+        }
+      },
+      "options" : {
+        "backgroundColor" : "black",
+        "defurnishViewEnabled" : true,
+        "dollhouseEnabled" : true,
+        "dollhouseLabelsEnabled" : true,
+        "floorSelectEnabled" : true,
+        "floorplanEnabled" : true,
+        "highlightReelEnabled" : true,
+        "labelsEnabled" : true,
+        "measurements" : "measure",
+        "roomBoundsEnabled" : true,
+        "socialSharingEnabled" : true,
+        "spaceSearchEnabled" : true,
+        "tourButtonsEnabled" : true,
+        "tourDollhousePanSpeed" : 2,
+        "tourFastTransitionsEnabled" : true,
+        "tourPanAngle" : 35,
+        "tourPanDirection" : "auto",
+        "tourPanSpeed" : 10,
+        "tourTransitionSpeed" : 1250,
+        "tourTransitionTime" : 600,
+        "tourZoomDuration" : 3500,
+        "unitType" : "imperial",
+        "urlBrandingEnabled" : true,
+        "vrEnabled" : true
+      }
+    }
+  }
+}

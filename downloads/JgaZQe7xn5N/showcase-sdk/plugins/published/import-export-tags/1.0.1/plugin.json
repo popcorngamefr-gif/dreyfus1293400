@@ -1,0 +1,13 @@
+{
+  "options":   {
+    "editOnly": true,
+    "icon": true
+  },
+  "config": {},
+  "description": "Import tags from a .CSV file into a space and export tags from a space into a .CSV file.",
+  "peerDependencies":   {
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "three": "^0.171.0"
+  }
+}

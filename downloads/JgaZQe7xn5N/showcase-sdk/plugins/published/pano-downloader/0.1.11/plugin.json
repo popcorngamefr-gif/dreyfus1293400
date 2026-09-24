@@ -1,0 +1,9 @@
+{
+  "config": {},
+  "description": "Export full resolution panoramas",
+  "options":   {
+    "editOnly": true,
+    "mlsEnabled": false,
+    "icon": true
+  }
+}

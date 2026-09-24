@@ -1,0 +1,69 @@
+{
+  "config":   {
+    "company":     {
+      "description": "What company do you represent?",
+      "type": "string"
+    },
+    "name":     {
+      "description": "What name should appear on the card?",
+      "type": "string",
+      "required": ["name"]
+    },
+    "phone":     {
+      "title": "Phone #",
+      "description": "What is the best number to reach you?",
+      "type": "string",
+      "pattern": "^\\+?[\\d\\.\\s\\()-]+$",
+      "ui:options": {"inputType": "tel"}
+    },
+    "email":     {
+      "description": "What is the best email to reach you?",
+      "type": "string",
+      "format": "email",
+      "ui:widget": "text"
+    },
+    "linkedIn":     {
+      "description": "What is your LinkedIn profile address?",
+      "type": "string",
+      "format": "url"
+    },
+    "twitter":     {
+      "title": "𝕏",
+      "description": "What is your 𝕏 profile address?",
+      "type": "string",
+      "format": "url"
+    },
+    "facebook":     {
+      "description": "What is your Facebook profile address?",
+      "type": "string",
+      "format": "url"
+    },
+    "instagram":     {
+      "description": "What is your Instagram profile address?",
+      "type": "string",
+      "format": "url"
+    },
+    "photoUrl":     {
+      "description": "The agent's photo",
+      "type": "string",
+      "ui:field": "imageUpload",
+      "title": "Photo"
+    },
+    "photoCrop":     {
+      "description": "Crop agent photo to fit area with scaling",
+      "title": "Crop Image",
+      "type": "boolean"
+    },
+    "logoUrl":     {
+      "description": "The company's logo",
+      "type": "string",
+      "ui:field": "imageUpload",
+      "title": "Logo"
+    }
+  },
+  "description": "Displays a pop-out card with information for contacting a realtor or other person about this property.",
+  "options":   {
+    "mlsEnabled": false,
+    "icon": true
+  }
+}

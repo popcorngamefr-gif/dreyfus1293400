@@ -1,0 +1,22 @@
+{
+  "required": [],
+  "config":   {
+    "intensity":     {
+      "description": "Intensity",
+      "type": "string",
+      "enum":       [
+        "light",
+        "moderate",
+        "heavy"
+      ]
+    },
+    "radius":     {
+      "description": "Radius",
+      "type": "number",
+      "maximum": 10,
+      "minimum": 1
+    }
+  },
+  "description": "Creates some lovely snowflakes",
+  "peerDependencies": {"three": "0.151"}
+}

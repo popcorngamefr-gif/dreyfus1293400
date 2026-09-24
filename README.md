@@ -50,10 +50,11 @@ Si les données de la visite changent, relancer `python scripts/generer-manifest
 
 ### Tuiles 360° recréées
 
-matterport-dl n'avait téléchargé aucune tuile pour 9 points de vue sur 32 : le lecteur tournait alors
-à l'infini quand on s'y déplaçait. `scripts/generer-tuiles-manquantes.py` les a recréées (niveaux 512, 1k et 2k)
+Pendant le téléchargement, Matterport a refusé environ 5 000 requêtes (erreur HTTP 429, « trop de requêtes ») :
+9 points de vue sur 32 n'avaient aucune tuile et un 10e était incomplet. Le lecteur tournait alors
+à l'infini quand on s'y déplaçait. `scripts/generer-tuiles-manquantes.py` recrée les tuiles absentes (niveaux 512, 1k et 2k), sans toucher aux tuiles téléchargées,
 à partir des images skybox 2k de ces points, présentes dans `models/.../assets/pan/2k/`.
-Le niveau 4k n'existe pas pour ces 9 points : un zoom très poussé y restera en qualité 2k.
+Le niveau 4k n'existe pas pour ces 10 points : un zoom très poussé y restera en qualité 2k.
 
 ## Déploiement
 

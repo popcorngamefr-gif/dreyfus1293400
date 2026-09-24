@@ -56,6 +56,26 @@ Pendant le téléchargement, Matterport a refusé environ 5 000 requêtes (erreu
 à partir des images skybox 2k de ces points, présentes dans `models/.../assets/pan/2k/`.
 Le niveau 4k n'existe pas pour ces 10 points : un zoom très poussé y restera en qualité 2k.
 
+## Visite « Souvenir depuis Pierre Dreyfus »
+
+Le dossier `souvenir/` ajoute une couche par-dessus le lecteur, chargée par une ligne dans `index.html`.
+Il ne modifie ni le lecteur ni les données de la visite.
+
+| Adresse | Ce qu'on obtient |
+|---|---|
+| `/` (mode souvenir, par défaut) | Animation de la porte d'entrée, arrivée dans l'entrée (point de vue 0, face à l'appartement), boutons « Mode jeu » et « Navigation classique » |
+| `/?m=JgaZQe7xn5N&classique=1` | La visite telle qu'elle était, avec un bouton « Visite souvenir » pour revenir |
+
+Dans les deux modes, le logo Matterport (non téléchargé, donc cassé) est remplacé par le texte « Souvenir depuis Pierre Dreyfus ».
+
+Le point de départ est passé au lecteur par l'adresse (`&ss=1&sr=0,0&play=1`), comme un lien de partage Matterport.
+Si l'adresse contient déjà un point de départ (`ss`, `sp` ou `start`), il est respecté et l'intro n'est pas jouée.
+
+**Mode jeu** : le lecteur sait déjà avancer tant qu'une touche W/A/S/D ou flèche est enfoncée. Le mode jeu lui renvoie ces touches selon
+leur position physique (donc ZQSD sur un clavier AZERTY), transforme les mouvements de la souris verrouillée en petits glisser
+(regarder autour), et un clic va vers le viseur. Échap quitte le mode jeu. Sur mobile, un joystick virtuel remplace le clavier
+et on regarde en glissant sur l'écran.
+
 ## Déploiement
 
 Le repo GitHub est relié à Vercel (offre Hobby) :

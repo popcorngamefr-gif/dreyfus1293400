@@ -48,6 +48,13 @@ Le serveur Python de matterport-dl faisait quelques choix à la volée. Ils sont
 
 Si les données de la visite changent, relancer `python scripts/generer-manifeste.py`.
 
+### Tuiles 360° recréées
+
+matterport-dl n'avait téléchargé aucune tuile pour 9 points de vue sur 32 : le lecteur tournait alors
+à l'infini quand on s'y déplaçait. `scripts/generer-tuiles-manquantes.py` les a recréées (niveaux 512, 1k et 2k)
+à partir des images skybox 2k de ces points, présentes dans `models/.../assets/pan/2k/`.
+Le niveau 4k n'existe pas pour ces 9 points : un zoom très poussé y restera en qualité 2k.
+
 ## Déploiement
 
 Le repo GitHub est relié à Vercel (offre Hobby) :
@@ -55,4 +62,4 @@ Le repo GitHub est relié à Vercel (offre Hobby) :
 - preset « Other », aucune commande de build, répertoire racine du repo ;
 - chaque push crée un déploiement de prévisualisation, `main` est la production.
 
-Environ 12 600 fichiers et 530 Mo sont déployés.
+Environ 13 750 fichiers et 540 Mo sont déployés.

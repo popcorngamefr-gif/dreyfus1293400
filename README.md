@@ -48,6 +48,17 @@ Le serveur Python de matterport-dl faisait quelques choix à la volée. Ils sont
 
 Si les données de la visite changent, relancer `python scripts/generer-manifeste.py`.
 
+### Dates d'expiration
+
+Les adresses Matterport sont signées et expirent (`validUntil`, `expires`). Si une de ces dates est passée, le lecteur
+attend indéfiniment un renouvellement (console : `[expiring-resource] Stale resource, waiting for refresh`) et la visite
+ne se charge jamais. Toutes les dates sont donc repoussées à 2099, y compris dans les données préchargées
+intégrées à `index.html` et dans `_mp_api/player/models/JgaZQe7xn5N/files`. Après un nouveau téléchargement, vérifier :
+
+```
+grep -rhoE 'validUntil[^0-9]*20[0-9]{2}-[0-9-]+' --exclude='*.orig.*' index.html _mp_api | sort | uniq -c
+```
+
 ### Tuiles 360° recréées
 
 Pendant le téléchargement, Matterport a refusé environ 5 000 requêtes (erreur HTTP 429, « trop de requêtes ») :

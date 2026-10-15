@@ -321,6 +321,12 @@ a[data-testid="matterport-logo"]::before {
 	cursor: progress;
 	opacity: 0.7;
 }
+.sv-liens {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px 22px;
+}
 .sv-lien-classique {
 	color: #3a3128;
 	font-size: 13px;

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Balade libre · Souvenir depuis Pierre Dreyfus</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/balade/balade.css">
+<script type="importmap">
+{ "imports": { "three": "/balade/vendor/three.module.min.js" } }
+</script>
+<script type="module" src="/balade/balade.js"></script>
+</head>
+<body>
+<canvas id="bl-scene" aria-label="L'appartement en 3D"></canvas>
+<div id="bl-ambiance" aria-hidden="true"></div>
+
+<div id="bl-barre">
+	<button type="button" id="bl-bouton-ambiance" aria-pressed="false" title="Lumière chaude de fin de journée (touche L)">&#9728;&#65039; <span class="bl-long">Fin de journée</span></button>
+	<button type="button" id="bl-bouton-plan" aria-pressed="true" title="Afficher le plan (touche M)">Plan</button>
+	<a href="/" title="Revenir à la visite Matterport"><span class="bl-long">Visite souvenir</span><span class="bl-court">Visite</span></a>
+</div>
+
+<canvas id="bl-plan" width="400" height="200" title="Toucher le plan pour s'y rendre"></canvas>
+
+<div id="bl-joystick" aria-hidden="true"><div class="bl-manche"></div></div>
+
+<p id="bl-aide" role="status"></p>
+
+<div id="bl-accueil" role="dialog" aria-label="Balade libre">
+	<div class="bl-carte">
+		<h1>Souvenir depuis Pierre Dreyfus</h1>
+		<p class="bl-sous-titre">Balade libre dans l'appartement, au 12 rue Pierre Dreyfus</p>
+		<div class="bl-progression" aria-hidden="true"><div id="bl-barre-progression"></div></div>
+		<button type="button" id="bl-entrer" disabled>Chargement…</button>
+		<p class="bl-commandes bl-pc">ZQSD ou flèches pour marcher · souris pour regarder · Maj pour courir · Échap pour libérer la souris</p>
+		<p class="bl-commandes bl-mobile">Joystick à gauche pour marcher · glisser l'écran pour regarder</p>
+		<a class="bl-retour" href="/">Revenir à la visite souvenir</a>
+	</div>
+</div>
+</body>
+</html>

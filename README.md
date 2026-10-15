@@ -11,6 +11,7 @@ et adaptée pour être servie comme un simple site statique (Vercel, offre gratu
 | `index.html`, `js/`, `css/`, `fonts/`, `locale/`, `webgl-vendors/`, `showcase-sdk/`, `images/`, `cursors/` | Le lecteur Matterport (versions patchées par matterport-dl) |
 | `models/`, `apifs/` | Données de la visite : tuiles 360°, maillage 3D, textures, photos |
 | `_mp_api/` | Réponses de l'API Matterport enregistrées (anciennement `api/`, nom réservé par Vercel) |
+| `balade/` | La balade libre en 3D (voir plus bas), avec Three.js r169 copié dans `balade/vendor/` |
 | `JSNetProxy.js` | Redirige toutes les requêtes du lecteur vers ce site, et choisit le bon fichier (voir plus bas) |
 | `_mp_manifest.js` | Liste des fichiers disponibles, générée par `scripts/generer-manifeste.py` |
 | `vercel.json`, `.vercelignore` | Configuration Vercel |
@@ -87,6 +88,39 @@ leur position physique (donc ZQSD sur un clavier AZERTY), transforme les mouveme
 (regarder autour), et un clic va vers le viseur. Échap quitte le mode jeu. Sur mobile, un joystick virtuel remplace le clavier
 et on regarde en glissant sur l'écran.
 
+## Balade libre en 3D (`/balade/`)
+
+Une page indépendante du lecteur Matterport : on se promène à hauteur d'yeux (1,60 m) dans le maillage 3D texturé
+de la visite, comme dans un jeu, sans sauter de point de vue en point de vue. Liens depuis l'écran de la porte
+(« Balade libre en 3D ») et depuis la barre du mode souvenir (« Balade 3D »).
+
+| Fichier | Rôle |
+|---|---|
+| `balade/index.html`, `balade/balade.css` | La page : accueil, barre de boutons, plan, joystick |
+| `balade/balade.js` | Chargement du maillage, collisions, commandes, plan |
+| `balade/vendor/` | Three.js r169 et ses chargeurs (glTF, Draco, KTX2), servis par le site plutôt que par un CDN |
+
+**Données utilisées** : les 3 tuiles de détail maximal du maillage, `models/.../assets/mesh_tiles/~/3/lod3_*.glb`
+(glTF compressé Draco, textures KTX2 2048 px, environ 3 Mo en tout). Sur ordinateur, une fois la visite prête, les textures sont
+remplacées par les JPG 4096 px du même dossier (environ 7 Mo). Sur téléphone, on garde les KTX2 pour ménager la mémoire graphique.
+Les textures du scan contiennent déjà la lumière : elles sont affichées sans éclairage (`MeshBasicMaterial`).
+
+**Collisions** : le scan ne distingue pas les murs des meubles. Au chargement, on dessine une grille de 5 cm vue de dessus :
+- « sol » : couvert par un triangle horizontal à moins de 15 cm du sol ;
+- « obstacle » : traversé par un triangle entre 30 cm et 1,50 m de haut (murs, meubles, portes ouvertes).
+
+On peut marcher sur le sol (petits trous bouchés sur 15 cm), à plus de 20 cm de tout obstacle. Les tapis et objets bas
+ne bloquent pas. Si on se retrouve hors de la zone (trou du scan), on peut toujours en sortir. Cette même grille dessine le plan.
+
+**Commandes** : ZQSD / WASD ou flèches (touches physiques, donc ZQSD en AZERTY), souris verrouillée pour regarder,
+Maj pour courir, M pour le plan, L pour la lumière « fin de journée » (filtre chaud et vignettage), Échap pour libérer la souris.
+Sur écran tactile : joystick en bas à gauche, glisser ailleurs pour regarder. Toucher le plan téléporte à l'endroit touché.
+
+**Repères** : le maillage est en mètres, y vers le haut. Les positions des points de vue (`graph_GetShowcaseSweeps.json`,
+z vers le haut) se convertissent par `(x, y, z) -> (x, z, -y)`. Le départ est le point de vue 0 (l'entrée), face au séjour.
+
+`/balade/?debug` expose `window.__balade` (position du joueur, grilles) pour les tests.
+
 ## Déploiement
 
 Le repo GitHub est relié à Vercel (offre Hobby) :
@@ -94,4 +128,4 @@ Le repo GitHub est relié à Vercel (offre Hobby) :
 - preset « Other », aucune commande de build, répertoire racine du repo ;
 - chaque push crée un déploiement de prévisualisation, `main` est la production.
 
-Environ 13 750 fichiers et 540 Mo sont déployés.
+Environ 13 770 fichiers et 545 Mo sont déployés.

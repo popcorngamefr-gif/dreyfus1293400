@@ -90,7 +90,7 @@ et on regarde en glissant sur l'écran.
 
 ## Balade libre en 3D (`/balade/`)
 
-Une page indépendante du lecteur Matterport : on se promène à hauteur d'yeux (1,30 m) dans le maillage 3D texturé
+Une page indépendante du lecteur Matterport : on se promène à la hauteur des photos (1,19 m) dans le maillage 3D texturé
 de la visite, comme dans un jeu, sans sauter de point de vue en point de vue. Liens depuis l'écran de la porte
 (« Balade libre en 3D ») et depuis la barre du mode souvenir (« Balade 3D »).
 
@@ -108,13 +108,18 @@ Les textures du scan contiennent déjà la lumière : elles sont affichées sans
 
 **Photos 360 projetées** : le maillage est grossier et sa texture floue de près. Comme le lecteur Matterport, on
 projette donc sur le maillage les photos 360 des points de vue. Chaque pixel mélange les photos des 4 points de vue
-les plus proches (en privilégiant ceux visibles depuis le joueur) : une photo compte d'autant plus que la direction
-dans laquelle elle a vu ce pixel est proche de la direction du regard. Debout sur un point de vue, on voit exactement
-sa photo ; en marchant, l'image glisse continûment vers la suivante. Une photo qui entre ou sort de la liste des 4 le fait
+les plus proches (en privilégiant ceux visibles depuis le joueur). Le maillage étant approximatif, deux photos placent
+un même objet à des endroits un peu différents : un mélange équilibré donne des images dédoublées. La photo du point
+le plus proche de la caméra domine donc très fortement (poids en 1 / distance⁴) ; entre points proches, celle qui a vu
+le pixel dans la direction du regard l'emporte ; les autres remplissent surtout ce que la première ne voit pas.
+Debout sur un point de vue, on voit exactement sa photo. Une photo qui entre ou sort de la liste des 4 le fait
 en fondu (0,5 s). Pour chaque point de vue, une carte de distances (cube 512 px, rendu du maillage depuis le centre
 de la photo, en flottant filtré si la carte graphique le permet) indique ce que la photo voit vraiment ; si aucune
 photo ne voit un pixel, on garde la texture du maillage. Là où le scan n'a rien (vue par une fenêtre ouverte), une
 sphère de fond affiche les photos à l'infini.
+
+**Aimant** : après 0,35 s sans commande, on glisse vers le point de vue le plus proche (à moins de 1,20 m, chemin libre),
+là où l'image est parfaite. Le moindre mouvement annule la glissade.
 
 Fluidité : photos décodées hors du fil principal (`ImageBitmapLoader`) et envoyées à la carte graphique dès leur arrivée,
 points suivants préchargés, regard légèrement lissé, résolution abaissée automatiquement si les images ralentissent.
@@ -126,7 +131,7 @@ points suivants préchargés, regard légèrement lissé, résolution abaissée 
 - Orientation des faces, mesurée en comparant les faces aux rendus du maillage (identique pour tous les points) :
   une direction L dans le repère de la photo (z vers le haut, rotation `pano.rotation`) se lit dans le cube à
   `(-L.y, L.z, L.x)`, avec les faces skybox 2, 4, 0, 5, 1, 3 dans l'ordre +x, -x, +y, -y, +z, -z.
-- Hauteur des yeux à 1,30 m : les photos sont prises à 1,19 m, plus on en est près, moins l'image se déforme.
+- Hauteur des yeux à 1,19 m, celle des photos : plus on en est près, moins l'image se déforme.
   Le plan montre les points de vue ; le toucher à moins de 70 cm d'un point y place exactement.
 - La tache bleue au plafond du couloir d'entrée est dans la photo d'origine (point de vue 0), tout comme le flou au sol
   sous chaque point de vue (le trépied, flouté par Matterport).

@@ -30,8 +30,11 @@ const MORCEAUX = [
 // depart : point de vue 0 (piece « entrance »), face a l'appartement
 const DEPART = { x: 0.07, z: -0.05, cap: 0 };
 
-// les photos 360 sont prises a 1,19 m : plus on en est pres, moins l'image se deforme
-const YEUX = 1.3;
+// a la hauteur des photos 360 : debout sur un point de vue, l'image est exactement la photo
+const YEUX = 1.19;
+// a l'arret, on glisse vers le point de vue le plus proche (la ou l'image est parfaite)
+const AIMANT = 1.2; // metres
+const ATTENTE_AIMANT = 0.35; // secondes sans commande avant de glisser
 const MARCHE = 1.5; // m/s
 const COURSE = 3.0;
 const RAYON = 0.2; // distance minimale aux obstacles
@@ -571,6 +574,8 @@ function avancer(dt) {
 		lat += stick.x;
 	}
 	const norme = Math.hypot(av, lat);
+	if (norme > 0.05)
+		joueur.immobile = 0;
 	if (norme > 1) {
 		av /= norme;
 		lat /= norme;
@@ -626,6 +631,39 @@ function adapterResolution(dt) {
 	}
 }
 
+// chemin libre en ligne droite (pour l'aimant)
+function cheminLibre(x0, z0, x1, z1) {
+	const n = Math.ceil(Math.hypot(x1 - x0, z1 - z0) / GRILLE.pas);
+	for (let i = 1; i <= n; i++)
+		if (!peutMarcher(x0 + (x1 - x0) * i / n, z0 + (z1 - z0) * i / n))
+			return false;
+	return true;
+}
+
+let pointAimant = null;
+function aimanter(dt) {
+	joueur.immobile = (joueur.immobile || 0) + dt;
+	if (joueur.immobile < ATTENTE_AIMANT || Math.hypot(joueur.vx, joueur.vz) > 0.05) {
+		pointAimant = null;
+		return;
+	}
+	if (!pointAimant) {
+		let meilleur = AIMANT;
+		for (const p of panoramas.points) {
+			const d = Math.hypot(p.sol.x - joueur.x, p.sol.z - joueur.z);
+			if (d < meilleur && (d < 0.1 || cheminLibre(joueur.x, joueur.z, p.sol.x, p.sol.z))) {
+				meilleur = d;
+				pointAimant = p;
+			}
+		}
+		if (!pointAimant)
+			return;
+	}
+	const k = 1 - Math.exp(-dt * 3.5);
+	joueur.x += (pointAimant.sol.x - joueur.x) * k;
+	joueur.z += (pointAimant.sol.z - joueur.z) * k;
+}
+
 function boucle(maintenant) {
 	const dt = Math.min((maintenant - precedent) / 1000, 0.1);
 	precedent = maintenant;
@@ -637,6 +675,7 @@ function boucle(maintenant) {
 		const n = Math.ceil(dt / 0.02);
 		for (let i = 0; i < n; i++)
 			v = avancer(dt / n);
+		aimanter(dt);
 	}
 	// leger balancement de la marche
 	joueur.pas += dt * v * 5.5;

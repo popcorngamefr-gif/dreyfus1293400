@@ -90,7 +90,7 @@ et on regarde en glissant sur l'écran.
 
 ## Balade libre en 3D (`/balade/`)
 
-Une page indépendante du lecteur Matterport : on se promène à hauteur d'yeux (1,60 m) dans le maillage 3D texturé
+Une page indépendante du lecteur Matterport : on se promène à hauteur d'yeux (1,30 m) dans le maillage 3D texturé
 de la visite, comme dans un jeu, sans sauter de point de vue en point de vue. Liens depuis l'écran de la porte
 (« Balade libre en 3D ») et depuis la barre du mode souvenir (« Balade 3D »).
 
@@ -98,12 +98,31 @@ de la visite, comme dans un jeu, sans sauter de point de vue en point de vue. Li
 |---|---|
 | `balade/index.html`, `balade/balade.css` | La page : accueil, barre de boutons, plan, joystick |
 | `balade/balade.js` | Chargement du maillage, collisions, commandes, plan |
+| `balade/panoramas.js` | Projection des photos 360 des points de vue sur le maillage |
 | `balade/vendor/` | Three.js r169 et ses chargeurs (glTF, Draco, KTX2), servis par le site plutôt que par un CDN |
 
 **Données utilisées** : les 3 tuiles de détail maximal du maillage, `models/.../assets/mesh_tiles/~/3/lod3_*.glb`
 (glTF compressé Draco, textures KTX2 2048 px, environ 3 Mo en tout). Sur ordinateur, une fois la visite prête, les textures sont
 remplacées par les JPG 4096 px du même dossier (environ 7 Mo). Sur téléphone, on garde les KTX2 pour ménager la mémoire graphique.
 Les textures du scan contiennent déjà la lumière : elles sont affichées sans éclairage (`MeshBasicMaterial`).
+
+**Photos 360 projetées** : le maillage est grossier et sa texture floue de près. Comme le lecteur Matterport, on
+projette donc sur le maillage la photo 360 du point de vue le plus proche (et visible depuis le joueur) :
+chaque pixel prend la couleur de la photo dans la direction (pixel - centre de la photo), avec un fondu de 0,6 s
+quand le point de vue change. Pour chaque point de vue, une carte de distances (cube 512 px, rendu du maillage
+depuis le centre de la photo) indique ce que la photo voit vraiment : derrière un meuble, on garde la photo précédente,
+sinon la texture du maillage.
+
+- Photos : `models/.../assets/pan/2k/~/<sweepUuid>_skybox<0-5>.jpg` (2048 px), ou `pan/high/` (1024 px) sur écran tactile,
+  pour ménager la mémoire graphique (environ 100 Mo par photo en 2k). 5 photos en mémoire sur ordinateur, 3 sur téléphone.
+- Points de vue : `_mp_api/mp/models/graph_GetShowcaseSweeps.json`, seulement ceux du scan (`placement: auto`, 28 sur 32) :
+  les 4 photos ajoutées à la main sont placées approximativement.
+- Orientation des faces, mesurée en comparant les faces aux rendus du maillage (identique pour tous les points) :
+  une direction L dans le repère de la photo (z vers le haut, rotation `pano.rotation`) se lit dans le cube à
+  `(-L.y, L.z, L.x)`, avec les faces skybox 2, 4, 0, 5, 1, 3 dans l'ordre +x, -x, +y, -y, +z, -z.
+- Hauteur des yeux à 1,30 m : les photos sont prises à 1,19 m, plus on en est près, moins l'image se déforme.
+  Le plan montre les points de vue ; le toucher à moins de 70 cm d'un point y place exactement.
+- La tache bleue au plafond du couloir d'entrée est dans la photo d'origine (point de vue 0).
 
 **Collisions** : le scan ne distingue pas les murs des meubles. Au chargement, on dessine une grille de 5 cm vue de dessus :
 - « sol » : couvert par un triangle horizontal à moins de 15 cm du sol ;

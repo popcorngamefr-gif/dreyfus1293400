@@ -5,10 +5,11 @@ Le maillage du scan est grossier et sa texture est une seule image pour tout l'a
 c'est flou. Les photos 360 des points de vue, elles, sont nettes (6 faces de cube en 2048 px, ou 1024 px sur
 ecran tactile : c'est deja la finesse de l'ecran, et la memoire graphique d'un telephone est limitee).
 
-Chaque pixel melange les photos des 4 points de vue les plus proches. Une photo compte d'autant plus
-que la direction dans laquelle elle a vu ce pixel est proche de la direction du regard (rendu « selon
-le point de vue ») : debout sur un point de vue, on voit exactement sa photo ; en marchant, l'image glisse
-continument vers la photo suivante. Quand la liste des 4 points change, la photo qui sort s'efface et
+Chaque pixel melange les photos des 4 points de vue les plus proches. Le maillage etant approximatif,
+deux photos placent un meme objet a des endroits un peu differents : un melange a parts egales donne des
+images dedoublees. La photo du point de vue le plus proche de la camera domine donc tres fortement (poids
+en 1 / distance^4) ; parmi des points proches, celle qui a vu le pixel dans la direction du regard l'emporte.
+Les autres photos servent surtout a remplir ce que la premiere ne voit pas. Quand la liste des 4 points change, la photo qui sort s'efface et
 celle qui entre apparait en fondu.
 
 Ce qu'une photo ne voit pas (derriere un meuble) ne doit pas recevoir sa couleur : pour chaque point
@@ -63,13 +64,16 @@ uniform mat3 orient${i};
 uniform float gain${i};`;
 		melange += `
 	if (gain${i} > 0.001) {
+		float dc = length(cameraPosition - centre${i});
 		vec3 d = vMonde - centre${i};
 		float l = length(d);
 		float v = gain${i} * visibilite(distanceStockee(prof${i}, d), l);
 		if (v > 0.001) {
 			// 0 quand la photo a vu ce pixel exactement dans la direction du regard
 			float ecart = 1.0 - dot(d / l, regard);
-			float w = v / ((ecart + 0.002) * (ecart + 0.002) * (0.3 + l));
+			float proximite = 0.15 + dc;
+			proximite *= proximite;
+			float w = v / ((ecart + 0.002) * (ecart + 0.002) * (0.3 + l) * proximite * proximite);
 			somme += w * textureCube(pano${i}, orient${i} * d).rgb;
 			poids += w;
 			couverture = max(couverture, v);
@@ -112,8 +116,9 @@ uniform mat3 orient${i};
 uniform float gain${i};`;
 		melange += `
 	if (gain${i} > 0.001) {
-		float l = length(cameraPosition - centre${i});
-		float w = gain${i} / ((0.2 + l) * (0.2 + l));
+		float l = 0.1 + length(cameraPosition - centre${i});
+		l *= l * l;
+		float w = gain${i} / (l * l);
 		somme += w * textureCube(pano${i}, orient${i} * regard).rgb;
 		poids += w;
 	}`;

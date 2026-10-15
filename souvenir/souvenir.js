@@ -3,7 +3,7 @@ Ajouts « Souvenir depuis Pierre Dreyfus » par-dessus le lecteur Matterport.
 
 - Mode souvenir (par defaut) : animation de la porte d'entree, arrivee dans l'entree,
   bouton « Mode jeu » (deplacements au clavier + souris, joystick sur mobile),
-  bouton « Navigation classique ».
+  bouton « Navigation classique », lien vers la balade libre en 3D (/balade/).
 - Mode classique (?m=...&classique=1) : le lecteur tel qu'il etait, seul le logo change.
 
 Rien ici ne touche aux donnees de la visite. Le lecteur est pilote uniquement avec
@@ -115,6 +115,7 @@ des evenements clavier / pointeur, comme le ferait un utilisateur.
 					jeu.demarrer();
 			});
 			barre.appendChild(boutonJeu);
+			barre.appendChild(el("a", { href: "/balade/", title: "Se promener librement dans l'appartement en 3D" }, '<span class="sv-long">Balade 3D</span><span class="sv-court">3D</span>'));
 			barre.appendChild(el("a", { href: lienClassique, title: "La visite Matterport d'origine" }, '<span class="sv-long">Navigation classique</span><span class="sv-court">Classique</span>'));
 		}
 		document.body.appendChild(barre);
@@ -138,7 +139,10 @@ des evenements clavier / pointeur, comme le ferait un utilisateur.
 			'<div class="sv-legende"><h1>Souvenir depuis Pierre Dreyfus</h1><p>12 rue Pierre Dreyfus</p></div>' +
 			'<div class="sv-actions">' +
 				'<button type="button" class="sv-entrer" disabled>Chargement…</button>' +
-				'<a class="sv-lien-classique" href="' + lienClassique + '">Navigation classique</a>' +
+				'<div class="sv-liens">' +
+					'<a class="sv-lien-classique" href="/balade/">Balade libre en 3D</a>' +
+					'<a class="sv-lien-classique" href="' + lienClassique + '">Navigation classique</a>' +
+				'</div>' +
 			'</div>');
 		document.body.appendChild(intro);
 

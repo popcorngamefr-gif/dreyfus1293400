@@ -1,0 +1,283 @@
+/*
+Balade libre : se promener dans le maillage 3D de la visite, comme dans un jeu.
+Memes couleurs que la couche souvenir (souvenir/souvenir.css).
+*/
+
+:root {
+	--bl-texte: #ffffff;
+	--bl-fond-bouton: rgba(20, 20, 20, 0.62);
+	--bl-fond-bouton-survol: rgba(20, 20, 20, 0.82);
+	--bl-accent: #f2c14e;
+	--bl-mur: #e9e3d8;
+	--bl-bois: #8a5a36;
+	--bl-nuit: #1b1512;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	background: var(--bl-nuit);
+	color: var(--bl-texte);
+	font: 400 15px/1.4 Roboto, "Helvetica Neue", Arial, sans-serif;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+
+#bl-scene {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	touch-action: none;
+	transition: filter 1.2s ease;
+}
+
+/* ---------- ambiance « fin de journee » ---------- */
+
+#bl-ambiance {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 1.2s ease;
+	background:
+		radial-gradient(ellipse at 50% 45%, rgba(255, 196, 120, 0.10) 0%, rgba(255, 170, 90, 0.06) 45%, rgba(40, 20, 5, 0.55) 100%);
+	mix-blend-mode: multiply;
+}
+.bl-chaud #bl-ambiance {
+	opacity: 1;
+}
+.bl-chaud #bl-scene {
+	filter: sepia(0.28) saturate(1.25) contrast(1.06) brightness(1.03) hue-rotate(-6deg);
+}
+
+/* ---------- barre de boutons ---------- */
+
+#bl-barre {
+	position: fixed;
+	top: max(12px, env(safe-area-inset-top));
+	right: max(12px, env(safe-area-inset-right));
+	z-index: 10;
+	display: flex;
+	gap: 8px;
+	font: 500 13px/1 Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+#bl-barre button,
+#bl-barre a {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 34px;
+	padding: 0 14px;
+	border: 0;
+	border-radius: 17px;
+	background: var(--bl-fond-bouton);
+	color: var(--bl-texte);
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+#bl-barre button:hover,
+#bl-barre a:hover {
+	background: var(--bl-fond-bouton-survol);
+}
+#bl-barre button[aria-pressed="true"] {
+	background: var(--bl-accent);
+	color: #1b1b1b;
+}
+.bl-court {
+	display: none;
+}
+
+/* ---------- plan ---------- */
+
+#bl-plan {
+	position: fixed;
+	left: max(12px, env(safe-area-inset-left));
+	top: max(12px, env(safe-area-inset-top));
+	z-index: 10;
+	width: 220px;
+	height: 110px;
+	border-radius: 10px;
+	background: rgba(20, 20, 20, 0.55);
+	cursor: crosshair;
+	touch-action: none;
+}
+.bl-sans-plan #bl-plan {
+	display: none;
+}
+
+/* ---------- joystick (ecrans tactiles) ---------- */
+
+#bl-joystick {
+	position: fixed;
+	left: max(28px, env(safe-area-inset-left));
+	bottom: max(28px, env(safe-area-inset-bottom));
+	z-index: 10;
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	background: rgba(20, 20, 20, 0.35);
+	border: 2px solid rgba(255, 255, 255, 0.35);
+	touch-action: none;
+	display: none;
+}
+.bl-tactile #bl-joystick {
+	display: block;
+}
+.bl-manche {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 56px;
+	height: 56px;
+	margin: -28px 0 0 -28px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- aide ---------- */
+
+#bl-aide {
+	position: fixed;
+	left: 50%;
+	bottom: max(18px, env(safe-area-inset-bottom));
+	z-index: 10;
+	max-width: calc(100% - 32px);
+	margin: 0;
+	padding: 8px 14px;
+	transform: translateX(-50%);
+	border-radius: 17px;
+	background: var(--bl-fond-bouton);
+	font-size: 13px;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+	pointer-events: none;
+}
+#bl-aide.bl-visible {
+	opacity: 1;
+}
+.bl-tactile #bl-aide {
+	bottom: calc(max(28px, env(safe-area-inset-bottom)) + 140px);
+}
+
+/* ---------- accueil / pause ---------- */
+
+#bl-accueil {
+	position: fixed;
+	inset: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	background: rgba(27, 21, 18, 0.72);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	transition: opacity 0.5s ease;
+}
+#bl-accueil.bl-cache {
+	opacity: 0;
+	pointer-events: none;
+}
+.bl-carte {
+	width: 100%;
+	max-width: 440px;
+	text-align: center;
+}
+.bl-carte h1 {
+	margin: 0 0 6px;
+	font-size: clamp(22px, 5vw, 30px);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+.bl-sous-titre {
+	margin: 0 0 22px;
+	color: var(--bl-mur);
+	opacity: 0.85;
+}
+.bl-progression {
+	height: 4px;
+	margin: 0 auto 22px;
+	max-width: 260px;
+	border-radius: 2px;
+	background: rgba(255, 255, 255, 0.15);
+	overflow: hidden;
+}
+#bl-barre-progression {
+	width: 0;
+	height: 100%;
+	background: var(--bl-accent);
+	transition: width 0.3s ease;
+}
+.bl-pret .bl-progression {
+	visibility: hidden;
+}
+#bl-entrer {
+	min-width: 180px;
+	min-height: 48px;
+	padding: 0 26px;
+	border: 0;
+	border-radius: 24px;
+	background: var(--bl-accent);
+	color: #1b1b1b;
+	font: 600 16px/1 Roboto, "Helvetica Neue", Arial, sans-serif;
+	cursor: pointer;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+#bl-entrer:disabled {
+	background: rgba(255, 255, 255, 0.18);
+	color: rgba(255, 255, 255, 0.8);
+	cursor: progress;
+	box-shadow: none;
+}
+.bl-commandes {
+	margin: 18px 0 0;
+	font-size: 13px;
+	opacity: 0.8;
+}
+.bl-mobile,
+.bl-tactile .bl-pc {
+	display: none;
+}
+.bl-tactile .bl-mobile {
+	display: block;
+}
+.bl-retour {
+	display: inline-block;
+	margin-top: 16px;
+	color: var(--bl-texte);
+	font-size: 13px;
+	opacity: 0.75;
+}
+.bl-erreur #bl-entrer {
+	background: #c0523e;
+	color: #fff;
+}
+
+/* ---------- petits ecrans ---------- */
+
+@media (max-width: 560px) {
+	.bl-long {
+		display: none;
+	}
+	.bl-court {
+		display: inline;
+	}
+	#bl-plan {
+		top: calc(max(12px, env(safe-area-inset-top)) + 46px);
+		width: 160px;
+		height: 80px;
+	}
+}

@@ -64,6 +64,9 @@ const panoramas = creerPanoramas({ renderer, scene, tactile, voit: (...a) => voi
 
 const camera = new THREE.PerspectiveCamera(70, 1, 0.05, 60);
 camera.rotation.order = "YXZ";
+// calque 1 : le fond (photos a l'infini, vues par les fenetres ouvertes)
+camera.layers.enable(1);
+scene.add(panoramas.fond);
 
 function redimensionner() {
 	const l = window.innerWidth, h = window.innerHeight;
@@ -389,7 +392,8 @@ plan.addEventListener("pointerdown", (e) => {
 	cible = cible || plusProcheMarchable(x, z);
 	if (cible.x !== joueur.x || cible.z !== joueur.z) {
 		// on regarde dans la direction du deplacement
-		joueur.cap = Math.atan2(-(cible.x - joueur.x), -(cible.z - joueur.z));
+		const cap = Math.atan2(-(cible.x - joueur.x), -(cible.z - joueur.z));
+		joueur.cap += Math.atan2(Math.sin(cap - joueur.cap), Math.cos(cap - joueur.cap));
 		joueur.x = cible.x;
 		joueur.z = cible.z;
 	}
@@ -398,6 +402,8 @@ plan.addEventListener("pointerdown", (e) => {
 // ---------- joueur et commandes ----------
 
 const joueur = { x: DEPART.x, z: DEPART.z, cap: DEPART.cap, tangage: -0.05, vx: 0, vz: 0, pas: 0 };
+// direction affichee : suit celle du joueur avec un leger lissage (glisser au doigt, teleportation)
+const vue = { cap: joueur.cap, tangage: joueur.tangage };
 const touches = new Set();
 let actif = false;
 
@@ -599,9 +605,32 @@ function avancer(dt) {
 	return Math.hypot(joueur.vx, joueur.vz);
 }
 
+// resolution adaptative : si les images ralentissent, on calcule moins de pixels
+const ratioMax = Math.min(window.devicePixelRatio, 2);
+let ratio = ratioMax, tempsMoyen = 1 / 60, depuisReglage = 0;
+function adapterResolution(dt) {
+	tempsMoyen += (dt - tempsMoyen) * 0.05;
+	depuisReglage += dt;
+	if (depuisReglage < 2)
+		return;
+	let nouveau = ratio;
+	if (tempsMoyen > 1 / 40 && ratio > 1)
+		nouveau = Math.max(1, ratio - 0.25);
+	else if (tempsMoyen < 1 / 56 && ratio < ratioMax)
+		nouveau = Math.min(ratioMax, ratio + 0.25);
+	if (nouveau !== ratio) {
+		ratio = nouveau;
+		renderer.setPixelRatio(ratio);
+		redimensionner();
+		depuisReglage = 0;
+	}
+}
+
 function boucle(maintenant) {
 	const dt = Math.min((maintenant - precedent) / 1000, 0.1);
 	precedent = maintenant;
+	if (actif && !document.hidden)
+		adapterResolution(dt);
 	let v = 0;
 	if (actif) {
 		// petits pas, pour ne jamais sauter par-dessus un mur quand l'image saccade
@@ -613,7 +642,10 @@ function boucle(maintenant) {
 	joueur.pas += dt * v * 5.5;
 	const balance = Math.min(v / MARCHE, 1.5);
 	camera.position.set(joueur.x, YEUX + Math.sin(joueur.pas * 2) * 0.018 * balance, joueur.z);
-	camera.rotation.set(joueur.tangage, joueur.cap, Math.sin(joueur.pas) * 0.004 * balance);
+	const suivi = 1 - Math.exp(-dt * (tactile ? 14 : 30));
+	vue.cap += (joueur.cap - vue.cap) * suivi;
+	vue.tangage += (joueur.tangage - vue.tangage) * suivi;
+	camera.rotation.set(vue.tangage, vue.cap, Math.sin(joueur.pas) * 0.004 * balance);
 	panoramas.mettreAJour(joueur, dt);
 	renderer.render(scene, camera);
 	dessinerPlan();

@@ -107,14 +107,20 @@ remplacées par les JPG 4096 px du même dossier (environ 7 Mo). Sur téléphone
 Les textures du scan contiennent déjà la lumière : elles sont affichées sans éclairage (`MeshBasicMaterial`).
 
 **Photos 360 projetées** : le maillage est grossier et sa texture floue de près. Comme le lecteur Matterport, on
-projette donc sur le maillage la photo 360 du point de vue le plus proche (et visible depuis le joueur) :
-chaque pixel prend la couleur de la photo dans la direction (pixel - centre de la photo), avec un fondu de 0,6 s
-quand le point de vue change. Pour chaque point de vue, une carte de distances (cube 512 px, rendu du maillage
-depuis le centre de la photo) indique ce que la photo voit vraiment : derrière un meuble, on garde la photo précédente,
-sinon la texture du maillage.
+projette donc sur le maillage les photos 360 des points de vue. Chaque pixel mélange les photos des 4 points de vue
+les plus proches (en privilégiant ceux visibles depuis le joueur) : une photo compte d'autant plus que la direction
+dans laquelle elle a vu ce pixel est proche de la direction du regard. Debout sur un point de vue, on voit exactement
+sa photo ; en marchant, l'image glisse continûment vers la suivante. Une photo qui entre ou sort de la liste des 4 le fait
+en fondu (0,5 s). Pour chaque point de vue, une carte de distances (cube 512 px, rendu du maillage depuis le centre
+de la photo, en flottant filtré si la carte graphique le permet) indique ce que la photo voit vraiment ; si aucune
+photo ne voit un pixel, on garde la texture du maillage. Là où le scan n'a rien (vue par une fenêtre ouverte), une
+sphère de fond affiche les photos à l'infini.
+
+Fluidité : photos décodées hors du fil principal (`ImageBitmapLoader`) et envoyées à la carte graphique dès leur arrivée,
+points suivants préchargés, regard légèrement lissé, résolution abaissée automatiquement si les images ralentissent.
 
 - Photos : `models/.../assets/pan/2k/~/<sweepUuid>_skybox<0-5>.jpg` (2048 px), ou `pan/high/` (1024 px) sur écran tactile,
-  pour ménager la mémoire graphique (environ 100 Mo par photo en 2k). 5 photos en mémoire sur ordinateur, 3 sur téléphone.
+  pour ménager la mémoire graphique (environ 100 Mo par photo en 2k). 6 photos en mémoire (4 affichées, 2 préchargées).
 - Points de vue : `_mp_api/mp/models/graph_GetShowcaseSweeps.json`, seulement ceux du scan (`placement: auto`, 28 sur 32) :
   les 4 photos ajoutées à la main sont placées approximativement.
 - Orientation des faces, mesurée en comparant les faces aux rendus du maillage (identique pour tous les points) :
@@ -122,7 +128,8 @@ sinon la texture du maillage.
   `(-L.y, L.z, L.x)`, avec les faces skybox 2, 4, 0, 5, 1, 3 dans l'ordre +x, -x, +y, -y, +z, -z.
 - Hauteur des yeux à 1,30 m : les photos sont prises à 1,19 m, plus on en est près, moins l'image se déforme.
   Le plan montre les points de vue ; le toucher à moins de 70 cm d'un point y place exactement.
-- La tache bleue au plafond du couloir d'entrée est dans la photo d'origine (point de vue 0).
+- La tache bleue au plafond du couloir d'entrée est dans la photo d'origine (point de vue 0), tout comme le flou au sol
+  sous chaque point de vue (le trépied, flouté par Matterport).
 
 **Collisions** : le scan ne distingue pas les murs des meubles. Au chargement, on dessine une grille de 5 cm vue de dessus :
 - « sol » : couvert par un triangle horizontal à moins de 15 cm du sol ;

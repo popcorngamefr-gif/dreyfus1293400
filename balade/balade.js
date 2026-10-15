@@ -10,11 +10,15 @@ On peut marcher sur le sol, a plus d'un rayon d'epaule de tout obstacle.
 
 Reperes : le maillage est en metres, y vers le haut. Les points de vue Matterport (z vers le haut)
 se convertissent par (x, y, z) -> (x, z, -y).
+
+L'image vient des photos 360 des points de vue, projetees sur le maillage (voir panoramas.js) ;
+la texture du maillage ne sert que la ou aucune photo ne voit.
 */
 import * as THREE from "three";
 import { GLTFLoader } from "/balade/vendor/loaders/GLTFLoader.js";
 import { DRACOLoader } from "/balade/vendor/loaders/DRACOLoader.js";
 import { KTX2Loader } from "/balade/vendor/loaders/KTX2Loader.js";
+import { creerPanoramas } from "/balade/panoramas.js";
 
 const DOSSIER_MAILLAGE = "/models/7b65e66514b54366b3a13fe422755cf4/assets/mesh_tiles/~/3/";
 const MORCEAUX = [
@@ -26,7 +30,8 @@ const MORCEAUX = [
 // depart : point de vue 0 (piece « entrance »), face a l'appartement
 const DEPART = { x: 0.07, z: -0.05, cap: 0 };
 
-const YEUX = 1.6;
+// les photos 360 sont prises a 1,19 m : plus on en est pres, moins l'image se deforme
+const YEUX = 1.3;
 const MARCHE = 1.5; // m/s
 const COURSE = 3.0;
 const RAYON = 0.2; // distance minimale aux obstacles
@@ -54,6 +59,8 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xdfe8ee);
+
+const panoramas = creerPanoramas({ renderer, scene, tactile, voit: (...a) => voit(...a) });
 
 const camera = new THREE.PerspectiveCamera(70, 1, 0.05, 60);
 camera.rotation.order = "YXZ";
@@ -108,15 +115,16 @@ function preparer(racine) {
 		const carte = o.material.map;
 		if (carte)
 			carte.anisotropy = anisotropie;
-		// les textures du scan contiennent deja la lumiere : on les affiche telles quelles
+		// photos 360 projetees, et texture du scan (qui contient deja la lumiere) la ou elles ne voient pas
 		const nom = o.material.name;
-		o.material = new THREE.MeshBasicMaterial({ map: carte, side: THREE.DoubleSide });
+		o.material = panoramas.materiau(carte);
 		o.material.userData.jpg = nom;
 	});
 	scene.add(racine);
 }
 
-// Les .glb pointent vers des textures KTX2 en 2048 px. La meme texture existe en JPG 4096 px
+// Les .glb pointent vers des textures KTX2 en 2048 px (utilisees la ou aucune photo ne voit).
+// La meme texture existe en JPG 4096 px
 // (nommee comme le materiau) : on la charge ensuite, sur ordinateur seulement (memoire graphique).
 function passerEnHD() {
 	if (tactile || renderer.capabilities.maxTextureSize < 4096)
@@ -136,11 +144,9 @@ function passerEnHD() {
 			texture.flipY = false;
 			texture.colorSpace = THREE.SRGBColorSpace;
 			texture.anisotropy = anisotropie;
-			const ancienne = materiaux[0].map;
-			for (const m of materiaux) {
-				m.map = texture;
-				m.needsUpdate = true;
-			}
+			const ancienne = materiaux[0].uniforms.carte.value;
+			for (const m of materiaux)
+				m.uniforms.carte.value = texture;
 			if (ancienne)
 				ancienne.dispose();
 		});
@@ -151,6 +157,8 @@ function passerEnHD() {
 
 const sol = new Uint8Array(GRILLE.nx * GRILLE.nz);
 const obstacle = new Uint8Array(GRILLE.nx * GRILLE.nz);
+// au-dessus des meubles et sous le linteau des portes : surtout les murs
+const mur = new Uint8Array(GRILLE.nx * GRILLE.nz);
 let marchable = new Uint8Array(GRILLE.nx * GRILLE.nz);
 
 function caseDe(x, z) {
@@ -182,7 +190,7 @@ function rasteriser(racine) {
 			c.fromBufferAttribute(pos, ic).applyMatrix4(m);
 			const yMin = Math.min(a.y, b.y, c.y), yMax = Math.max(a.y, b.y, c.y);
 			const estSol = yMax < 0.15;
-			const traverse = yMax > 0.3 && yMin < 1.5;
+			const traverse = yMax > 0.3 && yMin < 1.95;
 			if (!estSol && !traverse)
 				continue;
 			if (estSol) {
@@ -204,6 +212,8 @@ function rasteriser(racine) {
 						sol[k] = 1;
 					else if (p.y > 0.3 && p.y < 1.5)
 						obstacle[k] = 1;
+					else if (p.y > 1.6 && p.y < 1.95)
+						mur[k] = 1;
 				}
 			}
 		}
@@ -243,6 +253,17 @@ function calculerMarchable() {
 function peutMarcher(x, z) {
 	const k = caseDe(x, z);
 	return k >= 0 && marchable[k] === 1;
+}
+
+// ligne de vue a hauteur d'yeux, entre deux points du plan
+function voit(x0, z0, x1, z1) {
+	const n = Math.ceil(Math.hypot(x1 - x0, z1 - z0) / GRILLE.pas);
+	for (let i = 1; i < n; i++) {
+		const k = caseDe(x0 + (x1 - x0) * i / n, z0 + (z1 - z0) * i / n);
+		if (k >= 0 && mur[k])
+			return false;
+	}
+	return true;
 }
 
 function plusProcheMarchable(x, z) {
@@ -312,6 +333,13 @@ function dessinerPlan() {
 	ctxPlan.clearRect(0, 0, plan.width, plan.height);
 	ctxPlan.imageSmoothingEnabled = false;
 	ctxPlan.drawImage(fondPlan, t.ox, t.oy, GRILLE.nx * t.e, GRILLE.nz * t.e);
+	// points de vue : la ou l'image est la plus nette
+	ctxPlan.fillStyle = "rgba(27, 21, 18, 0.55)";
+	for (const p of panoramas.points) {
+		ctxPlan.beginPath();
+		ctxPlan.arc(t.ox + (p.sol.x - GRILLE.xMin) / GRILLE.pas * t.e, t.oy + (p.sol.z - GRILLE.zMin) / GRILLE.pas * t.e, 2.5, 0, Math.PI * 2);
+		ctxPlan.fill();
+	}
 	const px = t.ox + (joueur.x - GRILLE.xMin) / GRILLE.pas * t.e;
 	const py = t.oy + (joueur.z - GRILLE.zMin) / GRILLE.pas * t.e;
 	// cone de vision
@@ -349,8 +377,17 @@ plan.addEventListener("pointerdown", (e) => {
 	const sy = (e.clientY - r.top) * plan.height / r.height;
 	const x = GRILLE.xMin + (sx - t.ox) / t.e * GRILLE.pas;
 	const z = GRILLE.zMin + (sy - t.oy) / t.e * GRILLE.pas;
-	const cible = plusProcheMarchable(x, z);
-	if (peutMarcher(cible.x, cible.z)) {
+	// pres d'un point de vue, on s'y place exactement : l'image y est parfaite
+	let cible = null, meilleure = 0.7;
+	for (const p of panoramas.points) {
+		const d = Math.hypot(p.sol.x - x, p.sol.z - z);
+		if (d < meilleure) {
+			meilleure = d;
+			cible = { x: p.sol.x, z: p.sol.z };
+		}
+	}
+	cible = cible || plusProcheMarchable(x, z);
+	if (cible.x !== joueur.x || cible.z !== joueur.z) {
 		// on regarde dans la direction du deplacement
 		joueur.cap = Math.atan2(-(cible.x - joueur.x), -(cible.z - joueur.z));
 		joueur.x = cible.x;
@@ -577,6 +614,7 @@ function boucle(maintenant) {
 	const balance = Math.min(v / MARCHE, 1.5);
 	camera.position.set(joueur.x, YEUX + Math.sin(joueur.pas * 2) * 0.018 * balance, joueur.z);
 	camera.rotation.set(joueur.tangage, joueur.cap, Math.sin(joueur.pas) * 0.004 * balance);
+	panoramas.mettreAJour(joueur, dt);
 	renderer.render(scene, camera);
 	dessinerPlan();
 	requestAnimationFrame(boucle);
@@ -584,7 +622,7 @@ function boucle(maintenant) {
 
 // ---------- demarrage ----------
 
-Promise.all(MORCEAUX.map(chargerMorceau)).then((racines) => {
+Promise.all([Promise.all(MORCEAUX.map(chargerMorceau)), panoramas.initialiser()]).then(async ([racines]) => {
 	for (const r of racines) {
 		preparer(r);
 		rasteriser(r);
@@ -596,12 +634,14 @@ Promise.all(MORCEAUX.map(chargerMorceau)).then((racines) => {
 	const depart = plusProcheMarchable(DEPART.x, DEPART.z);
 	joueur.x = depart.x;
 	joueur.z = depart.z;
+	boutonEntrer.textContent = "Chargement des photos…";
+	await panoramas.demarrer(joueur);
 	accueil.classList.add("bl-pret");
 	boutonEntrer.disabled = false;
 	boutonEntrer.textContent = "Entrer";
 	passerEnHD();
 	if (new URLSearchParams(location.search).has("debug"))
-		window.__balade = { joueur, peutMarcher, sol, obstacle, marchable, GRILLE };
+		window.__balade = { joueur, peutMarcher, sol, obstacle, mur, marchable, GRILLE, THREE, renderer, scene, panoramas };
 }).catch((err) => {
 	console.error(err);
 	document.documentElement.classList.add("bl-erreur");
